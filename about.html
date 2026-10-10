@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About – Simple-Project</title>
+<meta name="description" content="Who makes Simple-Project and how the releases are made.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#181825">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/about.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/about.html">
+<meta property="og:title" content="About – Simple-Project">
+<meta property="og:description" content="Who makes Simple-Project and how the releases are made.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html">Organizer</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>About</h1>
+</div></div>
+
+<div class="wrap home">
+<main id="main">
+  <h2>Who I am</h2>
+  <p>Hi, I'm FreakySneaky from Switzerland. Simple-Project is where I publish the software I make.</p>
+  <p>A lot of software is more complicated than it needs to be. With Simple-Project I try to build things that work without a manual: an operating system that sets itself up, and a tool that cleans up your folders without putting your files at risk.</p>
+  <p>Everything is free and open source. Anyone can read the code, check what it does, or help.</p>
+
+  <h2>How releases are made</h2>
+  <p><strong>Simple OS</strong> is built with Debian's live-build tools. Before a release, the image is started and installed in virtual machines in three modes: BIOS, UEFI and UEFI with Secure Boot. Things that can only be checked on real hardware are tracked as “Verify …” issues on GitHub.</p>
+  <p>Updates are published to a signed package repository. That's how installed systems get new versions without reinstalling.</p>
+  <p>Between releases nothing is pushed to GitHub, so the code there always matches the newest published version. More about this under <a href="contribute.html#how">How the project works</a>.</p>
+  <p><strong>Simple Organizer</strong> goes through regular code reviews. Version 3.4.4, for example, fixes 23 issues found in the third review.</p>
+
+  <h2>Contact</h2>
+  <p>The best way to reach me is GitHub. For bugs and ideas, please open an issue in the right project, so nothing gets lost.</p>
+  <ul>
+    <li><a href="https://github.com/FreakySneaky787">github.com/FreakySneaky787</a></li>
+    <li><a href="https://github.com/FreakySneaky787/Simple-OS/issues">Simple OS issues</a></li>
+    <li><a href="https://github.com/FreakySneaky787/Simple-Organizer/issues">Simple Organizer issues</a></li>
+  </ul>
+</main>
+
+<aside class="side">
+  <div class="box">
+    <h3>Project facts</h3>
+    <table>
+      <tr><td class="sub">From</td><td>Switzerland</td></tr>
+      <tr><td class="sub">Programs</td><td>2</td></tr>
+      <tr><td class="sub">First Simple OS</td><td>7 Oct 2026</td></tr>
+      <tr><td class="sub">Simple OS</td><td>GPL-3.0</td></tr>
+      <tr><td class="sub">Organizer</td><td>MIT</td></tr>
+    </table>
+  </div>
+  <div class="box">
+    <h3>Names</h3>
+    <p><strong>S-P</strong> stands for Simple-Project.<br><strong>SOS</strong> stands for Simple Operating System. The O in its logo is a lifebuoy.</p>
+  </div>
+</aside>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple Organizer – Simple-Project</title>
+<meta name="description" content="Simple Organizer sorts a folder like Downloads into sub-folders by file type. Windows and Linux, free and open source.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#181825">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/organizer.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/organizer.html">
+<meta property="og:title" content="Simple Organizer – Simple-Project">
+<meta property="og:description" content="Simple Organizer sorts a folder like Downloads into sub-folders by file type. Windows and Linux, free and open source.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body class="org">
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html" aria-current="page">Organizer</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <div class="title">
+    <svg width="48" height="48" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 11a3 3 0 0 1 3-3h9l4 4h13a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z" fill="#40a02b"/><path d="M11 20h18M11 25h12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <div>
+      <h1>Simple Organizer</h1>
+      <p class="meta">Version 3.4.4 · released 9 October 2026 · Windows 10/11 and Linux · MIT License</p>
+    </div>
+  </div>
+  <div class="actions">
+    <a class="btn org" href="download.html#organizer">Download for Windows <span class="size">(13.3 MB)</span></a>
+    <a class="btn plain" href="organizer-guide.html">User guide</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.4.4">Release notes</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer">Source code</a>
+  </div>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#what">What it does</a></li>
+      <li><a href="#use">How to use it</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#safety">What it won't touch</a></li>
+      <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+      <li><a href="#install">Installation</a></li>
+      <li><a href="#files">Settings and logs</a></li>
+      <li><a href="#history">Version history</a></li>
+      <li><a href="#planned">Planned</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content">
+  <figure>
+    <div class="frame"><span>Screenshot coming soon</span></div>
+    <figcaption>Simple Organizer with the Preview tab open.</figcaption>
+  </figure>
+
+  <h2 id="what">What it does</h2>
+  <p>Simple Organizer sorts the files in one folder into sub-folders by type. It's made for folders that fill up over time, like Downloads or the Desktop.</p>
+  <p>It doesn't need an internet connection, doesn't run in the background and doesn't delete anything. Files are only moved, and every run can be undone.</p>
+  <p>On Windows it's a single program you start from a ZIP file, without installing. On Linux it runs with Python. macOS is not supported.</p>
+
+  <h2 id="use">How to use it</h2>
+  <ol>
+    <li>Choose a folder, for example Downloads.</li>
+    <li>Click <strong>Scan</strong> (<kbd>Ctrl</kbd> + <kbd>R</kbd>). Nothing is moved yet. The Preview tab shows where each file would go.</li>
+    <li>If it looks right, click <strong>Organize</strong> (<kbd>Ctrl</kbd> + <kbd>O</kbd>) and confirm.</li>
+    <li>Changed your mind? <strong>Undo last</strong> (<kbd>Ctrl</kbd> + <kbd>Z</kbd>) puts everything back.</li>
+  </ol>
+
+  <h2 id="categories">Categories</h2>
+  <p>Files are sorted into these folders:</p>
+  <ul class="tags">
+    <li>Images</li><li>Documents</li><li>Archives</li><li>Videos</li><li>Music</li><li>Code</li><li>Programs</li><li>Disk Images</li><li>Others</li>
+  </ul>
+  <p>If you want, files can also go into sub-folders such as <code>Images/Photos</code> or <code>Documents/PDFs</code>. You can add your own rules on top (see below).</p>
+  <p>The <a href="organizer-guide.html#types">user guide</a> lists every file extension and sub-folder.</p>
+
+  <h2 id="features">Features</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Feature</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><th>Preview</th><td>A scan only plans the moves. You see the result before anything happens.</td></tr>
+      <tr><th>Undo</th><td>Undo the last run, or any of the last 20 manual and 20 automatic runs, in any order.</td></tr>
+      <tr><th>Rules</th><td>Your own sorting rules by file extension, name pattern, size or age. For example: everything with “invoice” in the name goes to <code>Invoices</code>. <a href="organizer-guide.html#rules">How rules work</a></td></tr>
+      <tr><th>Staging mode</th><td>Collect moves first, then commit or revert them together.</td></tr>
+      <tr><th>Auto-organize</th><td>Sorts the folder on a schedule while the program is open.</td></tr>
+      <tr><th>Duplicate finder</th><td>Finds files that are exactly the same. Copies go to the Recycle Bin or Trash only if you confirm.</td></tr>
+      <tr><th>Sub-folder scans</th><td>Can scan inside sub-folders, with limits for depth, number of folders and time.</td></tr>
+      <tr><th>Look</th><td>Light and dark theme. Your settings are saved.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="safety">What it won't touch</h2>
+  <ul>
+    <li>Files are never deleted or overwritten. If a file with the same name already exists, the new one gets a number, like <code>photo_1.jpg</code>.</li>
+    <li>System files, shortcuts, temporary files and downloads that are still running are skipped.</li>
+    <li>OneDrive files that are only stored online are not downloaded.</li>
+    <li>For whole drives, your home folder, system folders and Git projects, it asks before doing anything.</li>
+    <li>The undo history is written while files are being moved. If the program crashes, you can still undo.</li>
+    <li>Only one copy of the program and one task can run at a time.</li>
+  </ul>
+
+  <h2 id="shortcuts">Keyboard shortcuts</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>R</kbd></td><td>Scan</td></tr>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>O</kbd></td><td>Organize</td></tr>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td><td>Undo last run</td></tr>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>Q</kbd></td><td>Quit (waits for a running task to finish)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="install">Installation</h2>
+  <h3>Windows 10 and 11</h3>
+  <ol>
+    <li><a href="download.html#organizer">Download</a> <code>simple_organizer_windows_v3.4.4.zip</code>.</li>
+    <li>Extract the ZIP file.</li>
+    <li>Start <code>simple_organizer.exe</code>.</li>
+  </ol>
+  <div class="note"><p>The program isn't code-signed yet, so Windows SmartScreen may show a warning. Right-click the file, open <strong>Properties</strong> and tick <strong>Unblock</strong>.</p></div>
+
+  <h3>Linux</h3>
+  <p>You need Python 3.11 or newer with Tkinter. There is no ready-made Linux package yet.</p>
+  <pre># Debian / Ubuntu
+sudo apt install python3-tk
+
+# Fedora / Bazzite
+sudo dnf install python3-tkinter
+
+git clone https://github.com/FreakySneaky787/Simple-Organizer.git
+cd Simple-Organizer
+python3 main.py</pre>
+
+  <h2 id="files">Settings and logs</h2>
+  <p>If something goes wrong, the program writes an <code>error.log</code>. Please attach it when you <a href="help.html#report">report a problem</a>.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>System</th><th>Folder</th></tr></thead>
+    <tbody>
+      <tr><td>Windows</td><td><code>%APPDATA%\simple_organizer\</code></td></tr>
+      <tr><td>Linux</td><td><code>~/.config/simple_organizer/</code> and <code>~/.local/share/simple_organizer/</code></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="history">Version history</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Version</th><th>Date</th><th>Main changes</th></tr></thead>
+    <tbody>
+      <tr><th>3.4.4</th><td class="num">9 Oct 2026</td><td>23 fixes from the third review; new Programs and Disk Images categories; no leftover copies when moving between drives; Desktop shortcuts are never moved; only one instance can run; errors are saved to <code>error.log</code>.</td></tr>
+      <tr><th>3.4.3</th><td class="num">8 Oct 2026</td><td>15 fixes; OneDrive online-only files skipped in the duplicate check; scheduled runs continue after a restart; log capped at 5,000 lines; window size and position remembered better.</td></tr>
+      <tr><th>3.4.2</th><td class="num">6 Oct 2026</td><td>Safety release after a full code review; undo history saved more often and more safely; <code>desktop.ini</code> and <code>Thumbs.db</code> protected.</td></tr>
+    </tbody>
+  </table></div>
+  <p><a href="https://github.com/FreakySneaky787/Simple-Organizer/releases">All release notes on GitHub →</a></p>
+
+  <h2 id="planned">Planned</h2>
+  <p>Things I'd like to add. There are no dates for these yet. See also the <a href="roadmap.html#organizer">roadmap</a>.</p>
+  <ul>
+    <li>Search and filter in the Preview tab</li>
+    <li>Export scan results as CSV or HTML</li>
+    <li>Watch mode that sorts new files as soon as they appear</li>
+    <li>Flatpak or AppImage package for Linux</li>
+    <li>Code-signed Windows version, so SmartScreen doesn't warn anymore</li>
+  </ul>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help – Simple-Project</title>
+<meta name="description" content="Frequently asked questions about Simple OS and Simple Organizer, and how to report a problem.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#181825">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/help.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/help.html">
+<meta property="og:title" content="Help – Simple-Project">
+<meta property="og:description" content="Frequently asked questions about Simple OS and Simple Organizer, and how to report a problem.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html">Organizer</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html" aria-current="page">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>Help</h1>
+  <p class="lead">Answers to common questions, and what to do when something doesn't work.</p>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#os">Simple OS</a></li>
+      <li><a href="#os-hardware">Simple OS: hardware</a></li>
+      <li><a href="#organizer">Simple Organizer</a></li>
+      <li><a href="#general">General</a></li>
+      <li><a href="#report">Report a problem</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content faq">
+  <h2 id="os">Simple OS</h2>
+
+  <h3>Can I try it without installing it?</h3>
+  <p>Yes. Start your computer from the USB stick and Simple OS runs as a live system. Nothing on your computer changes until you start the installer.</p>
+
+  <h3>How do I get updates?</h3>
+  <p>You don't have to do anything. Simple OS checks for updates after you log in, every 12 hours and after sleep, and installs them with the Software Updates app. New Simple OS versions come the same way.</p>
+
+  <h3>Will a new version reset my settings?</h3>
+  <p>No. Settings you've changed yourself are kept when a new version is installed.</p>
+
+  <h3>How long will Simple OS get security updates?</h3>
+  <p>Simple OS 1.x is based on Debian 12, which gets security updates until June 2028. Simple OS 2.0, based on Debian 13, is <a href="roadmap.html#v20">planned</a>.</p>
+
+  <h3>Which programs can I install?</h3>
+  <p>Everything in the Software Store, which uses Flathub. That includes browsers, office apps, games, image editors and much more.</p>
+
+  <h3>Can I play games?</h3>
+  <p>Yes. The Setup Wizard has a gaming option, and Steam works, also on older NVIDIA cards.</p>
+
+  <h3>I can't host a LAN game or use Steam Remote Play as host.</h3>
+  <p>The firewall blocks that. Turn the firewall off in Control Center → System → Security while you play, and turn it back on afterwards.</p>
+
+  <h3>Is Simple OS available in my language?</h3>
+  <p>Partly. Firefox, LibreOffice and the dictionaries use the language you pick in the installer. The Simple OS tools themselves (Setup Wizard, Control Center and so on) are only in English for now. Translations are planned for version 1.1.</p>
+
+  <h3>How do I change the keyboard layout?</h3>
+  <p>In Control Center → System. You can change it at any time.</p>
+
+  <h3>Where can I see all keyboard shortcuts?</h3>
+  <p>Press <kbd>Super</kbd> + <kbd>H</kbd> (the <kbd>Super</kbd> key is the one with the Windows logo). A few useful ones are also listed on the <a href="simple-os.html#shortcuts">Simple OS page</a>.</p>
+
+  <h2 id="os-hardware">Simple OS: hardware</h2>
+
+  <h3>Does it work with NVIDIA graphics cards?</h3>
+  <p>Yes, but the NVIDIA driver currently only works with Secure Boot turned off. Turn off Secure Boot in the firmware settings (BIOS/UEFI), then install the driver in Control Center → System → Hardware &amp; Drivers.</p>
+
+  <h3>My Lenovo laptop showed a “Self-Healing BIOS ESP” message.</h3>
+  <p>That's normal and harmless. It can appear once on the first start after installing, because the Lenovo firmware adjusts its backup to the new disk layout. It won't come back.</p>
+
+  <h3>I don't see the battery charge limit option.</h3>
+  <p>It only appears on laptops that support a charge limit. Most Lenovo, ASUS, Dell, HP and Framework laptops do.</p>
+
+  <h3>BIOS or firmware updates don't install.</h3>
+  <p>They're only installed while the laptop is plugged in. Whether your model gets them at all depends on the manufacturer (through LVFS).</p>
+
+  <h3>My Wi-Fi keeps dropping.</h3>
+  <p>Some routers have unstable 5 GHz channels. In Control Center → Wi-Fi you can set a network to use 2.4 GHz only.</p>
+
+  <h3>How do I use a second monitor or a projector?</h3>
+  <p>Plug it in; it turns on and extends the desktop by itself. Press <kbd>Super</kbd> + <kbd>P</kbd> to switch the display mode.</p>
+
+  <h2 id="organizer">Simple Organizer</h2>
+
+  <h3>Can it delete my files?</h3>
+  <p>No. It only moves files and never overwrites them. Every run can be undone. The duplicate finder only moves copies to the Recycle Bin if you confirm it.</p>
+
+  <h3>I organized a folder by mistake. How do I get my files back?</h3>
+  <p>Click <strong>Undo last</strong> (<kbd>Ctrl</kbd> + <kbd>Z</kbd>), or choose the run under <strong>History…</strong>.</p>
+
+  <h3>Windows warns me when I start it. Is that normal?</h3>
+  <p>Yes. The program isn't code-signed yet, so Windows SmartScreen doesn't know it. Right-click the file, open Properties and tick Unblock, or click “More info” and then “Run anyway”. The source code is <a href="https://github.com/FreakySneaky787/Simple-Organizer">public on GitHub</a>.</p>
+
+  <h3>Can I keep the program in my Downloads folder and organize Downloads?</h3>
+  <p>Yes. Simple Organizer never moves itself.</p>
+
+  <h3>Why wasn't a file moved?</h3>
+  <p>Check the <strong>Log</strong> tab after a scan. Common reasons are hidden files, files in sub-folders, files that are still downloading and shortcuts. The <a href="organizer-guide.html#not-moved">user guide</a> has the full list.</p>
+
+  <h3>A file went into the wrong folder.</h3>
+  <p>Add a <a href="organizer-guide.html#rules">rule</a>. Rules are checked before the normal sorting by file type.</p>
+
+  <h3>What happens if two files have the same name?</h3>
+  <p>Nothing is overwritten. The file that is moved gets a number at the end, for example <code>photo_1.jpg</code>.</p>
+
+  <h3>Does it need the internet or run in the background?</h3>
+  <p>No. It works completely offline. Auto-organize only runs while the window is open.</p>
+
+  <h3>Does it work on a Mac?</h3>
+  <p>No, only Windows 10, Windows 11 and Linux.</p>
+
+  <h2 id="general">General</h2>
+
+  <h3>Does it cost anything?</h3>
+  <p>No. Both programs are free and open source. Simple OS uses the GPL-3.0 license, Simple Organizer the MIT License.</p>
+
+  <h3>Who makes this?</h3>
+  <p>Simple-Project is made by FreakySneaky from Switzerland. More on the <a href="about.html">About</a> page.</p>
+
+  <h3>Can I help?</h3>
+  <p>Yes, and you don't need to program. See <a href="contribute.html">Get involved</a>.</p>
+
+  <h2 id="report">Report a problem</h2>
+  <p>Problems are collected on GitHub. You need a free GitHub account to open an issue.</p>
+
+  <h3>Simple OS</h3>
+  <ol>
+    <li>If you can, use <strong>Report a problem</strong> in Simple OS. It's in the menu.</li>
+    <li>Or open an issue on <a href="https://github.com/FreakySneaky787/Simple-OS/issues">github.com/FreakySneaky787/Simple-OS/issues</a>.</li>
+    <li>Write what you did, what happened, and which computer you have (model, graphics card).</li>
+  </ol>
+
+  <h3>Simple Organizer</h3>
+  <ol>
+    <li>Open an issue on <a href="https://github.com/FreakySneaky787/Simple-Organizer/issues">github.com/FreakySneaky787/Simple-Organizer/issues</a>.</li>
+    <li>Write what you did and what happened, and which version you use.</li>
+    <li>Attach <code>error.log</code> if there is one. On Windows it's in <code>%APPDATA%\simple_organizer\</code>, on Linux in <code>~/.config/simple_organizer/</code>.</li>
+  </ol>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

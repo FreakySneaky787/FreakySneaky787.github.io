@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple OS – Simple-Project</title>
+<meta name="description" content="Simple OS is a Linux distribution based on Debian 12 that sets itself up and installs updates by itself.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#181825">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/simple-os.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/simple-os.html">
+<meta property="og:title" content="Simple OS – Simple-Project">
+<meta property="og:description" content="Simple OS is a Linux distribution based on Debian 12 that sets itself up and installs updates by itself.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html" aria-current="page">Simple OS</a>
+    <a href="organizer.html">Organizer</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head os"><div class="wrap">
+  <div class="title">
+    <svg width="48" height="48" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="#fff" stroke-width="9"/><circle cx="20" cy="20" r="14" fill="none" stroke="#f38ba8" stroke-width="9" stroke-dasharray="11 11"/><circle cx="20" cy="20" r="18.5" fill="none" stroke="#000" stroke-opacity=".15"/><circle cx="20" cy="20" r="9.5" fill="none" stroke="#000" stroke-opacity=".15"/></svg>
+    <div>
+      <h1>Simple OS</h1>
+      <p class="meta">Version 1.0.3 · released 9 October 2026 · GPL-3.0</p>
+    </div>
+  </div>
+  <div class="actions">
+    <a class="btn" href="download.html#simple-os">Download <span class="size">(1.5 GB)</span></a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.0.3">Release notes</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-OS">Source code</a>
+  </div>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#what">What is Simple OS?</a></li>
+      <li><a href="#included">What's included</a></li>
+      <li><a href="#screenshots">Screenshots</a></li>
+      <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+      <li><a href="#details">Technical details</a></li>
+      <li><a href="#requirements">Requirements</a></li>
+      <li><a href="#install">Installation</a></li>
+      <li><a href="#updates">Updates</a></li>
+      <li><a href="#support">Support period</a></li>
+      <li><a href="#issues">Known issues</a></li>
+      <li><a href="#history">Version history</a></li>
+      <li><a href="#next">What's next</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content">
+  <figure>
+    <img class="banner" src="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png" width="1280" height="420" alt="SOS logo with a lifebuoy as the O. Keep it Simple. Simple Operating System, Debian 12, Openbox.">
+  </figure>
+
+  <h2 id="what">What is Simple OS?</h2>
+  <p>Simple OS (SOS, short for Simple Operating System) is a Linux distribution for normal PCs and laptops. It's based on Debian 12 and uses the Openbox window manager, with its own set of tools on top.</p>
+  <p>The idea is that you shouldn't need a terminal or any Linux knowledge. On the first login, the Setup Wizard asks a few questions (Wi-Fi, browser, office apps, gaming) and installs what you picked. After that, updates are installed through the Software Updates app, and that includes new versions of Simple OS itself.</p>
+  <p>You can try Simple OS from a USB stick before you install it. Nothing on your computer changes until you start the installer.</p>
+
+  <h2 id="included">What's included</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Part</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><th>Setup Wizard</th><td>Runs on the first login. Sets up network, browser, theme, office suite, gaming and the Software Store. You can start it again from the menu.</td></tr>
+      <tr><th>Control Center</th><td>Display, sound, Bluetooth, Wi-Fi, mouse &amp; touchpad, date &amp; time, keyboard, appearance, taskbar, power, storage, printers &amp; scanners, drivers, security and updates.</td></tr>
+      <tr><th>Software Store</th><td>Install apps from Flathub.</td></tr>
+      <tr><th>Software Updates</th><td>Updates Debian packages, Flatpak apps, firmware and Simple OS itself.</td></tr>
+      <tr><th>Backups</th><td>Timeshift, for restoring the system to an earlier state.</td></tr>
+      <tr><th>Security</th><td>Firewall (ufw) is switched on from the start. Secure Boot is supported.</td></tr>
+      <tr><th>Hardware</th><td>Drivers are detected automatically. Firmware updates through LVFS. Battery and power settings for laptops, including a charge limit on models that support it (most Lenovo, ASUS, Dell, HP and Framework laptops).</td></tr>
+      <tr><th>Languages</th><td>Language packs for the language you choose in the installer, and fonts for Arabic, Hebrew, Thai, Hindi, Chinese, Japanese and more.</td></tr>
+      <tr><th>Tools</th><td>Search launcher, window snapping, task manager, power menu, Storage Cleaner and “Report a problem”.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="screenshots">Screenshots</h2>
+  <div class="gallery">
+    <figure><div class="frame"><span>Coming soon</span></div><figcaption>The desktop</figcaption></figure>
+    <figure><div class="frame"><span>Coming soon</span></div><figcaption>Setup Wizard on the first login</figcaption></figure>
+    <figure><div class="frame"><span>Coming soon</span></div><figcaption>Control Center</figcaption></figure>
+    <figure><div class="frame"><span>Coming soon</span></div><figcaption>Software Store</figcaption></figure>
+  </div>
+
+  <h2 id="shortcuts">Keyboard shortcuts</h2>
+  <p>The <kbd>Super</kbd> key is the key with the Windows logo on most keyboards.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>Super</kbd> + <kbd>H</kbd></td><td>Show all keyboard shortcuts</td></tr>
+      <tr><td><kbd>Super</kbd> + <kbd>I</kbd></td><td>Open the Control Center</td></tr>
+      <tr><td><kbd>Super</kbd> + <kbd>P</kbd></td><td>Change the display mode, for example for a second monitor or a projector</td></tr>
+      <tr><td><kbd>Super</kbd> + <kbd>L</kbd></td><td>Lock the screen</td></tr>
+      <tr><td>Media keys</td><td>Volume and media keys on the keyboard work</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="details">Technical details</h2>
+  <div class="scroll"><table>
+    <tbody>
+      <tr><th>Based on</th><td>Debian 12 “Bookworm”, kernel and firmware from bookworm-backports</td></tr>
+      <tr><th>Desktop</th><td>Openbox, tint2 taskbar, Rofi menus, dunst notifications, picom</td></tr>
+      <tr><th>Look</th><td>Catppuccin Mocha (light and dark mode, accent colors), Inter font, Papirus icons</td></tr>
+      <tr><th>Login</th><td>LightDM</td></tr>
+      <tr><th>Installer</th><td>Calamares</td></tr>
+      <tr><th>Boot</th><td>GRUB, Secure Boot through shim</td></tr>
+      <tr><th>Apps</th><td>Flathub through Bazaar</td></tr>
+      <tr><th>Updates</th><td>Signed APT repository on GitHub, plus Flatpak and fwupd</td></tr>
+      <tr><th>Memory</th><td>earlyoom keeps the system responsive when memory runs low</td></tr>
+      <tr><th>Built with</th><td>Debian live-build</td></tr>
+      <tr><th>License</th><td>GPL-3.0</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="requirements">Requirements</h2>
+  <p>Official minimum requirements haven't been published yet. To install Simple OS you need:</p>
+  <ul>
+    <li>A PC or laptop that can start from a USB stick</li>
+    <li>A USB stick with at least 2 GB (everything on it will be erased)</li>
+    <li>An internet connection, so the Setup Wizard can install apps and updates</li>
+  </ul>
+  <p>Every release is tested in virtual machines (BIOS, UEFI and UEFI with Secure Boot). Tests on real hardware currently happen on a Lenovo ThinkPad E16 and a ThinkBook. <a href="contribute.html#test">Help with testing on other computers</a> is very welcome.</p>
+
+  <h2 id="install">Installation</h2>
+  <div class="note"><p><strong>Back up your files first.</strong> Installing Simple OS can erase the disk you install it on.</p></div>
+  <ol>
+    <li><a href="download.html#simple-os">Download</a> <code>Simple-OS.iso</code>. If you want, <a href="download.html#verify">check the download</a> with the checksum.</li>
+    <li>Write the ISO to a USB stick with a program like balenaEtcher or Rufus.</li>
+    <li>Restart the computer and open the boot menu. The key depends on the computer; it's often <kbd>F12</kbd>, <kbd>F11</kbd>, <kbd>F8</kbd> or <kbd>Esc</kbd>. Choose the USB stick.</li>
+    <li>Simple OS starts as a live system. You can look around; nothing is installed yet.</li>
+    <li>Double-click the install icon on the desktop and follow the installer.</li>
+    <li>Restart and log in. The Setup Wizard opens and helps you with the rest.</li>
+  </ol>
+  <p class="small sub">On some Lenovo laptops a “Self-Healing BIOS ESP” message appears once on the first start after installing. That's the Lenovo firmware adjusting to the new disk layout. It's harmless and doesn't come back.</p>
+
+  <h2 id="updates">Updates</h2>
+  <p>Simple OS checks for updates 2 minutes after you log in, every 12 hours, and when the computer wakes up from sleep. Updates are installed with the Software Updates app.</p>
+  <p>New versions of Simple OS come the same way, so you never have to reinstall. Settings you changed yourself are kept when a new version is installed. BIOS and firmware updates are only installed while a laptop is plugged in, and only if the manufacturer offers them through LVFS.</p>
+
+  <h2 id="support">Support period</h2>
+  <p>Simple OS 1.x is based on Debian 12. Debian provides security updates for it until <strong>June 2028</strong> (Debian LTS), and Simple OS passes them on through Software Updates.</p>
+  <p>A new version based on Debian 13, Simple OS 2.0, is planned. A preview is planned for early 2027. See the <a href="roadmap.html#v20">roadmap</a>.</p>
+
+  <h2 id="issues">Known issues</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Problem</th><th>What you can do</th></tr></thead>
+    <tbody>
+      <tr><td>The Simple OS tools (Setup Wizard, Control Center, messages) are only in English. Firefox, LibreOffice and the dictionaries do follow your language.</td><td>You can change the keyboard layout at any time in Control Center → System. Translations are planned for 1.1.</td></tr>
+      <tr><td>The firewall blocks hosting LAN games and Steam Remote Play as host.</td><td>Turn the firewall off in Control Center → System → Security while you play, and back on afterwards.</td></tr>
+      <tr><td>NVIDIA drivers only work with Secure Boot turned off. Simple OS itself starts with Secure Boot on.</td><td>Turn off Secure Boot in the firmware settings (BIOS/UEFI), then install the driver in Control Center → System → Hardware &amp; Drivers.</td></tr>
+      <tr><td>Some programs are older versions than on other distributions, because Simple OS is based on Debian 12.</td><td>Apps from the Software Store (Flathub) are up to date. Simple OS 2.0 will move to Debian 13.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="history">Version history</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Version</th><th>Date</th><th>Main changes</th></tr></thead>
+    <tbody>
+      <tr><th>1.0.3</th><td class="num">9 Oct 2026</td><td>Night light fixed on real hardware; new Mouse &amp; Touchpad and Date &amp; Time settings; option to limit Wi-Fi to 2.4 GHz; monitors, projectors and TVs turn on automatically; better sound on newer laptops; fonts for more languages; adds curl, wget, zip, unzip, ssh and OpenVPN.</td></tr>
+      <tr><th>1.0.2</th><td class="num">9 Oct 2026</td><td>Clock set over the internet; app autostart works; picture and PDF previews in the file manager; keyring unlocks at login; hardware video decoding on Intel and AMD; media keys and <kbd>Super</kbd> + <kbd>L</kbd>; fixes for NVIDIA RTX 50 and Bluetooth pairing.</td></tr>
+      <tr><th>1.0.1</th><td class="num">8 Oct 2026</td><td>Automatic update checks; Store app updates in Software Updates; office menu follows what's installed; 32-bit libraries for Steam on older NVIDIA cards.</td></tr>
+      <tr><th>1.0</th><td class="num">7 Oct 2026</td><td>First release.</td></tr>
+    </tbody>
+  </table></div>
+  <p><a href="https://github.com/FreakySneaky787/Simple-OS/releases">All release notes on GitHub →</a></p>
+
+  <h2 id="next">What's next</h2>
+  <p><strong>1.0.4</strong> is planned for the weekend of 17 October 2026: a brightness slider, screen lock when the computer is idle, a page for default apps and a page for startup apps. <strong>1.1</strong> adds display scaling for high-resolution screens and translations. Everything else is on the <a href="roadmap.html">roadmap</a>.</p>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get involved – Simple-Project</title>
+<meta name="description" content="How you can help Simple-Project: test Simple OS on your computer, report bugs, suggest ideas or build it yourself.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#181825">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/contribute.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/contribute.html">
+<meta property="og:title" content="Get involved – Simple-Project">
+<meta property="og:description" content="How you can help Simple-Project: test Simple OS on your computer, report bugs, suggest ideas or build it yourself.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html">Organizer</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html" aria-current="page">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>Get involved</h1>
+  <p class="lead">Simple-Project is made by one person. The most helpful thing you can do is try the software on your own computer and tell me what happens. You don't need to be able to program.</p>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#test">Test on your computer</a></li>
+      <li><a href="#bugs">Report bugs</a></li>
+      <li><a href="#ideas">Suggest ideas</a></li>
+      <li><a href="#translate">Translations</a></li>
+      <li><a href="#build-os">Build Simple OS</a></li>
+      <li><a href="#build-org">Build Simple Organizer</a></li>
+      <li><a href="#how">How the project works</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content">
+  <h2 id="test">Test Simple OS on your computer</h2>
+  <p>Every release is tested in virtual machines, but real computers are all a bit different. Right now, tests on these setups are missing the most:</p>
+  <ul>
+    <li>Desktop PCs with an NVIDIA graphics card</li>
+    <li>Laptops with AMD processors or graphics</li>
+    <li>Dual boot next to Windows</li>
+    <li>Computers with Secure Boot turned on</li>
+  </ul>
+  <h3>How to test</h3>
+  <ol>
+    <li>Start Simple OS from a USB stick (see the <a href="simple-os.html#install">installation guide</a>). You don't have to install it; the live system is enough for most checks.</li>
+    <li>Check the basics: Wi-Fi, sound, microphone, screen brightness, external monitor, Bluetooth, sleep and wake up.</li>
+    <li>Open an issue on <a href="https://github.com/FreakySneaky787/Simple-OS/issues">GitHub</a> with your computer model and what worked and what didn't. Short is fine.</li>
+  </ol>
+  <p>Hardware checks that are still open are listed on the <a href="roadmap.html#now">roadmap</a> and as “Verify …” issues on GitHub.</p>
+
+  <h2 id="bugs">Report bugs</h2>
+  <p>If something doesn't work, please report it, even if it seems small. The <a href="help.html#report">Help page</a> explains what to include.</p>
+
+  <h2 id="ideas">Suggest ideas</h2>
+  <p>Missing a setting, an app or a feature? Open an issue and describe what you'd like to do. Explaining the situation (“I want to …, but …”) helps more than a finished solution. Planned things are on the <a href="roadmap.html">roadmap</a>.</p>
+
+  <h2 id="translate">Translations</h2>
+  <p>The Simple OS tools are only in English at the moment. A Language &amp; Region page and translations are planned for <a href="roadmap.html#v11">version 1.1</a>. If you'd like to help translate into your language, open an issue so it can be planned together.</p>
+
+  <h2 id="build-os">Build Simple OS yourself</h2>
+  <p>Simple OS is built with Debian's live-build tools. You need a Debian 12 system (or the included <code>Containerfile</code>) and root rights for the build.</p>
+  <pre>git clone https://github.com/FreakySneaky787/Simple-OS.git
+cd Simple-OS
+sudo ./build_iso.sh</pre>
+  <p>The finished ISO, its checksum and a package list end up in the <code>output/</code> folder. <code>./build_iso.sh --config-only</code> only creates the live-build configuration and doesn't need root.</p>
+  <p>To test the ISO, <code>./test_vm.sh</code> starts it in QEMU in BIOS, UEFI or UEFI with Secure Boot mode (UEFI needs OVMF). <code>./test_installed_vm.sh</code> starts the installed disk afterwards.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Folder / file</th><th>What's in it</th></tr></thead>
+    <tbody>
+      <tr><td><code>config/</code></td><td>The live-build configuration</td></tr>
+      <tr><td><code>config/includes.chroot/</code></td><td>Files that end up in the image, at the same path as on the installed system</td></tr>
+      <tr><td><code>tools/</code></td><td>Release and branding tools</td></tr>
+      <tr><td><code>TESTING.md</code></td><td>The test checklist</td></tr>
+      <tr><td><code>ROADMAP.md</code></td><td>The roadmap shown on this website</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="build-org">Build Simple Organizer yourself</h2>
+  <p>Simple Organizer only uses the Python standard library. To run it from source you need Python 3.11 or newer with Tkinter:</p>
+  <pre>git clone https://github.com/FreakySneaky787/Simple-Organizer.git
+cd Simple-Organizer
+python3 main.py</pre>
+  <p>How to build the Windows <code>.exe</code> yourself is explained in the wiki: <a href="https://github.com/FreakySneaky787/Simple-Organizer/wiki/Building-from-Source">Building from Source</a>.</p>
+
+  <h2 id="how">How the project works</h2>
+  <h3>Releases</h3>
+  <p>Work is committed locally and only pushed to GitHub together with a release. Between releases nothing goes to GitHub, so the <code>main</code> branch always matches the newest published version. That means the code you see on GitHub is exactly what you're running.</p>
+  <p>Release day is the only day something is pushed, always in this order:</p>
+  <ol>
+    <li><code>git push</code></li>
+    <li>Build</li>
+    <li>Test</li>
+    <li>Sign</li>
+    <li>Publish</li>
+  </ol>
+  <p>Simple OS updates are published to a signed package repository. That's how installed systems update themselves.</p>
+
+  <h3>Issues and the project board</h3>
+  <p>Issues follow the work, not the push. As soon as something is done and tested without hardware, its issue is closed with the comment “done, ships in X.Y.Z” and its item on the project board is set to Done, even before the release.</p>
+  <p>Anything that still has to be checked on a real computer stays open as a “Verify …” issue.</p>
+  <div class="note"><p><strong>Good to know:</strong> if an issue is closed but you don't have the fix yet, it comes with the version named in the closing comment.</p></div>
+
+  <h3>Plans and testing</h3>
+  <ul>
+    <li><a href="https://github.com/FreakySneaky787/Simple-OS/blob/main/ROADMAP.md"><code>ROADMAP.md</code></a>: the plan and release cadence, also shown on the <a href="roadmap.html">roadmap page</a></li>
+    <li><a href="https://github.com/FreakySneaky787/Simple-OS/blob/main/TESTING.md"><code>TESTING.md</code></a>: everything that's tested before a release</li>
+  </ul>
+  <p>Simple Organizer also goes through regular code reviews. Version 3.4.4 fixed 23 issues from the third review.</p>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roadmap – Simple-Project</title>
+<meta name="description" content="What's planned for Simple OS 1.0.4, 1.1 and 2.0 (Debian 13), and for Simple Organizer.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#181825">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/roadmap.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/roadmap.html">
+<meta property="og:title" content="Roadmap – Simple-Project">
+<meta property="og:description" content="What's planned for Simple OS 1.0.4, 1.1 and 2.0 (Debian 13), and for Simple Organizer.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html">Organizer</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html" aria-current="page">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>Roadmap</h1>
+  <p class="lead">What I'm working on next. This is a plan, not a promise: dates and order can change, mostly depending on feedback.</p>
+  <p class="meta">Last updated after the release of Simple OS 1.0.3 (9 October 2026).</p>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#now">Now: testing 1.0.3</a></li>
+      <li><a href="#v104">Simple OS 1.0.4</a></li>
+      <li><a href="#v11">Simple OS 1.1</a></li>
+      <li><a href="#v20">Simple OS 2.0</a></li>
+      <li><a href="#ideas">Ideas</a></li>
+      <li><a href="#open">Open issues</a></li>
+      <li><a href="#organizer">Simple Organizer</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content">
+  <h2 id="now">Now: testing 1.0.3 on real hardware<span class="pill next">In progress</span></h2>
+  <p>Some fixes in 1.0.3 can only be confirmed on a real computer, not in a virtual machine. They're being checked on a Lenovo ThinkPad E16 and a ThinkBook. Whatever doesn't work goes into 1.0.4.</p>
+  <ul class="checklist">
+    <li>Night light really makes the screen warmer</li>
+    <li>The microphone shows up in the Sound settings</li>
+    <li>External monitors over HDMI, USB-C and DisplayPort are detected, including unplugging and standby</li>
+    <li>Mouse &amp; Touchpad settings (natural scrolling, tap to click, speed) work and are kept after a restart</li>
+    <li>Date &amp; Time: changing the time zone and automatic time asks for the password and applies</li>
+    <li>German language packs: Firefox and the dictionary switch to German, online or after Software Updates</li>
+    <li>No “new keyring” prompt in Chromium or Discord</li>
+    <li>Updating an installed system from 1.0.2 to 1.0.3 through Software Updates</li>
+  </ul>
+  <p>Have one of these laptops, or a different one? <a href="contribute.html#test">Testing help is very welcome.</a></p>
+
+  <h2 id="v104">Simple OS 1.0.4<span class="pill">Planned</span></h2>
+  <p class="when">Bug-fix release · planned for the weekend of 17 October 2026</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Change</th><th>Effort</th></tr></thead>
+    <tbody>
+      <tr><td>Fixes from the hardware checks above</td><td>–</td></tr>
+      <tr><td>Brightness slider in Control Center → Display</td><td>small</td></tr>
+      <tr><td>Lock and turn off the screen when the computer is idle (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/25">#25</a>)</td><td>medium</td></tr>
+      <tr><td>Power button: ask first or open the power menu</td><td>small–medium</td></tr>
+      <tr><td>Battery level of Bluetooth headphones</td><td>small</td></tr>
+      <tr><td>New Control Center page for default apps (browser, mail, PDF …)</td><td>medium</td></tr>
+      <tr><td>New Control Center page for startup apps</td><td>medium</td></tr>
+      <tr><td>Wi-Fi country set automatically from the time zone</td><td>small</td></tr>
+      <tr><td><code>git</code> included in the image (not decided yet)</td><td>small</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="v11">Simple OS 1.1<span class="pill">Planned</span></h2>
+  <p class="when">Feature release · about 2–3 months after 1.0</p>
+  <ul>
+    <li><strong>Display scaling</strong> for high-resolution screens: a Scale setting from 100 to 200% in Control Center → Display</li>
+    <li><strong>Language &amp; Region</strong> page, and translations of the Simple OS tools</li>
+    <li>A small app to test the webcam</li>
+    <li>A calendar that opens when you click the clock in the taskbar</li>
+    <li>Better dual boot with Windows: a warning about Windows Fast Startup and a note about the clock</li>
+    <li>Faster start and smaller system: smaller initramfs, AppArmor profiles, zstd compression (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a>)</li>
+    <li>Tests on more hardware: NVIDIA desktop, AMD laptop, dual boot with Windows, Secure Boot</li>
+  </ul>
+
+  <h2 id="v20">Simple OS 2.0 on Debian 13<span class="pill">Planned</span></h2>
+  <p>Simple OS 1.x is based on Debian 12 “Bookworm”. Debian 12 gets security updates through Debian LTS until June 2028, so 1.x stays safe to use while 2.0 is prepared.</p>
+  <p>Simple OS 2.0 will be based on Debian 13 “Trixie”. That brings a newer kernel, newer graphics drivers (Mesa) and newer firmware. A lot of things have to be checked again for this: NVIDIA drivers, the installer, night light, Secure Boot and the Simple OS tools.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Step</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td>Preview ISO based on Debian 13</td><td>Q1 2027</td></tr>
+      <tr><td>Public beta</td><td>Q2 2027</td></tr>
+      <tr><td>Simple OS 2.0</td><td>When the upgrade has been tested on several real computers</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>What happens to existing installs?</strong> Not decided yet. The preferred way is a guided upgrade tool that creates a restore point first. The alternative is a fresh install that takes your home folder along.</p>
+
+  <h2 id="ideas">Ideas<span class="pill">Not scheduled</span></h2>
+  <ul>
+    <li>Optional automatic security updates</li>
+    <li>Fingerprint reader support with a setup page</li>
+    <li>Accessibility: screen reader, large cursor, high-contrast theme</li>
+    <li>Help screenshots for printers and scanners</li>
+    <li>Sending a problem report to GitHub with one click, privacy first</li>
+    <li>Automatic test builds on every change</li>
+    <li>A version for ARM computers (low priority)</li>
+  </ul>
+
+  <h2 id="open">Open issues</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Issue</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/FreakySneaky787/Simple-OS/issues/10">#10</a> Bluetooth pairing with a passkey</td><td>Fixed in 1.0.2, waiting for confirmation with real devices</td></tr>
+      <tr><td><a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a> zstd instead of xz compression</td><td>Decision in 1.1 (the ISO would get about 18% bigger)</td></tr>
+      <tr><td><a href="https://github.com/FreakySneaky787/Simple-OS/issues/25">#25</a> Screen blanking conflicts, and apps can't pause the screen saver</td><td>Planned for 1.0.4</td></tr>
+    </tbody>
+  </table></div>
+  <p><a href="https://github.com/FreakySneaky787/Simple-OS/issues">All Simple OS issues on GitHub →</a></p>
+
+  <h2 id="organizer">Simple Organizer</h2>
+  <p>No dates yet. These are the next things on the list:</p>
+  <ul>
+    <li>Search and filter in the Preview tab</li>
+    <li>Export scan results as CSV or HTML</li>
+    <li>Watch mode that sorts new files as soon as they appear</li>
+    <li>Flatpak or AppImage package for Linux</li>
+    <li>Code-signed Windows version, so SmartScreen doesn't warn anymore</li>
+    <li>Automated tests</li>
+  </ul>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

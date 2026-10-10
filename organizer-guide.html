@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple Organizer user guide – Simple-Project</title>
+<meta name="description" content="How to use Simple Organizer: first run, the window, all file types and categories, custom rules and troubleshooting.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#181825">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/organizer-guide.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/organizer-guide.html">
+<meta property="og:title" content="Simple Organizer user guide – Simple-Project">
+<meta property="og:description" content="How to use Simple Organizer: first run, the window, all file types and categories, custom rules and troubleshooting.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body class="org">
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html" aria-current="page">Organizer</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>Simple Organizer user guide</h1>
+  <p class="meta">For version 3.4.4 · <a href="organizer.html">Back to Simple Organizer</a></p>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#first-run">Your first run</a></li>
+      <li><a href="#window">The window</a></li>
+      <li><a href="#types">File types</a></li>
+      <li><a href="#never">Files that are never moved</a></li>
+      <li><a href="#rules">Rules</a></li>
+      <li><a href="#not-moved">Why wasn't a file moved?</a></li>
+      <li><a href="#messages">Messages</a></li>
+      <li><a href="#more">More in the wiki</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content">
+  <h2 id="first-run">Your first run</h2>
+  <ol>
+    <li>Start Simple Organizer. The first time, it picks your <code>Downloads</code> folder. After that it remembers the last folder you used.</li>
+    <li>To choose another folder, click <strong>Browse…</strong> in the top bar.</li>
+    <li>Click <strong>Scan</strong> (<kbd>Ctrl</kbd> + <kbd>R</kbd>). Nothing is moved yet. The <strong>Preview</strong> tab lists every file that would be moved and where it would go.</li>
+    <li>Look through the list. Right-click a row to open the source or target folder, or to copy a path.</li>
+    <li>Click <strong>Organize</strong> (<kbd>Ctrl</kbd> + <kbd>O</kbd>). You'll see how many files will be moved and how big they are. Confirm, and the files are moved into category folders inside the folder you scanned.</li>
+  </ol>
+  <p>To reverse it, click <strong>Undo last</strong> (<kbd>Ctrl</kbd> + <kbd>Z</kbd>).</p>
+
+  <h2 id="window">The window</h2>
+  <div class="scroll"><table>
+    <tbody>
+      <tr><th>Top bar</th><td>Folder path, <strong>Browse…</strong>, switch between light and dark theme</td></tr>
+      <tr><th>Sidebar: Scan</th><td>Include sub-folders, include hidden files, use sub-categories, scan limits</td></tr>
+      <tr><th>Sidebar: Staging</th><td>Staging mode, <strong>Commit</strong>, <strong>Revert</strong></td></tr>
+      <tr><th>Sidebar: Auto-organize</th><td>Sort the folder on a schedule while the program is open</td></tr>
+      <tr><th>Buttons</th><td><strong>Scan</strong>, <strong>Organize</strong>, <strong>Undo last</strong>, <strong>History…</strong></td></tr>
+      <tr><th>Tabs</th><td><strong>Preview</strong>, <strong>Duplicates</strong>, <strong>Log</strong> (keeps the newest 5,000 lines), <strong>Rules</strong></td></tr>
+      <tr><th>Status bar</th><td>READY or WORKING, progress, shortcuts</td></tr>
+    </tbody>
+  </table></div>
+  <p>Only one task runs at a time; the other buttons are disabled while a scan or move is running. If you close the window during a task, the program waits until it's finished. Keyboard shortcuts also work with Caps Lock on, but not while a task is running or a dialog is open.</p>
+
+  <h2 id="types">File types</h2>
+  <p>Without rules, files are sorted by their extension. Sub-folders are off by default. If you turn on <strong>sub-categories</strong>, one more folder level is added, for example <code>Images/Photos</code>.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Folder</th><th>File extensions</th><th>Sub-folders</th></tr></thead>
+    <tbody>
+      <tr><th>Images</th><td>jpg, jpeg, png, gif, webp, bmp, tiff, tif, heic, heif, avif, jxl, svg, ico, psd, xcf, kra, raw, cr2, nef, arw, dng</td><td>Photos, GIFs, Vector, Icons, Editing, Raw</td></tr>
+      <tr><th>Documents</th><td>pdf, docx, docm, doc, txt, odt, rtf, xlsx, xlsm, xls, ods, pptx, pptm, ppt, odp, pps, ppsx, csv, md, epub, mobi, eml, msg</td><td>PDFs, Word, Spreadsheets, Presentations, Text, Ebooks, Email</td></tr>
+      <tr><th>Archives</th><td>zip, tar, gz, rar, 7z, bz2, xz, tgz</td><td>ZIP, RAR, 7Zip, TAR</td></tr>
+      <tr><th>Videos</th><td>mp4, mkv, mov, avi, wmv, flv, webm, m4v, mpeg, mpg, m2ts, mts, and ts files that are videos</td><td>MP4, MKV, AVI, MOV, WMV, WebM, FLV, MPEG, TS</td></tr>
+      <tr><th>Music</th><td>mp3, wav, flac, aac, ogg, wma, m4a, opus, aiff</td><td>Lossless, MP3, AAC, OGG, WMA</td></tr>
+      <tr><th>Code</th><td>py, ipynb, js, ts, jsx, tsx, html, htm, css, cpp, c, h, java, rb, go, rs, php, sh, bash, json, yaml, yml, toml, xml, sql, r, swift, kt, dart</td><td>Python, JavaScript, Web, Java, C_CPP, Go, Rust, Ruby, PHP, Swift, Dart, Shell, Config, SQL, R</td></tr>
+      <tr><th>Programs</th><td>exe, msi, dmg, pkg, apk, appimage, deb, rpm, flatpakref</td><td>Windows, macOS, Android, Linux</td></tr>
+      <tr><th>Disk Images</th><td>iso, img</td><td>–</td></tr>
+      <tr><th>Others</th><td>Everything else, including files without an extension</td><td>–</td></tr>
+    </tbody>
+  </table></div>
+  <h3>About .ts files</h3>
+  <p>A <code>.ts</code> file can be TypeScript code or a video. Simple Organizer looks inside the file to tell them apart: videos go to <code>Videos/TS</code>, code goes to <code>Code/JavaScript</code>. For OneDrive files that are only stored online, the file isn't opened (that would download it). There, a <code>.ts</code> file of 1 MB or more counts as a video.</p>
+
+  <h2 id="never">Files that are never moved</h2>
+  <ul>
+    <li>System files like <code>desktop.ini</code>, <code>Thumbs.db</code> and <code>.DS_Store</code></li>
+    <li>Shortcuts: <code>.lnk</code>, <code>.url</code>, <code>.desktop</code>, <code>.webloc</code></li>
+    <li>Downloads that are still running, temporary files and Office lock files</li>
+    <li>Simple Organizer itself, so you can keep the program in your Downloads folder</li>
+    <li>Hidden files, unless you turn on <strong>Include hidden files</strong></li>
+  </ul>
+
+  <h2 id="rules">Rules</h2>
+  <p>Rules send files to a folder you choose, before the normal sorting by file type. They're checked from top to bottom, and the first rule that matches wins.</p>
+  <h3>Create a rule</h3>
+  <p>Open the <strong>Rules</strong> tab and click <strong>Add rule</strong>. Every rule has a name, a condition, a value, a target folder, and can be switched on or off.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Condition</th><th>Matches</th><th>Example value</th></tr></thead>
+    <tbody>
+      <tr><td><code>extension</code></td><td>Files with this extension (also works for <code>tar.gz</code>)</td><td><code>pdf</code></td></tr>
+      <tr><td><code>name_pattern</code></td><td>File names matching a pattern, upper/lower case doesn't matter</td><td><code>invoice_*.pdf</code></td></tr>
+      <tr><td><code>min_size_mb</code></td><td>Files at least this big (in MB)</td><td><code>100</code></td></tr>
+      <tr><td><code>max_size_mb</code></td><td>Files at most this big (in MB)</td><td><code>10</code></td></tr>
+      <tr><td><code>older_than_days</code></td><td>Files not changed for at least this many days</td><td><code>365</code></td></tr>
+      <tr><td><code>newer_than_days</code></td><td>Files changed in the last … days</td><td><code>7</code></td></tr>
+    </tbody>
+  </table></div>
+  <h3>Examples</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Goal</th><th>Condition</th><th>Value</th><th>Target folder</th></tr></thead>
+    <tbody>
+      <tr><td>Keep invoices together</td><td><code>name_pattern</code></td><td><code>*invoice*</code></td><td><code>Invoices</code></td></tr>
+      <tr><td>Put large files aside</td><td><code>min_size_mb</code></td><td><code>500</code></td><td><code>Large files</code></td></tr>
+      <tr><td>Archive old files</td><td><code>older_than_days</code></td><td><code>365</code></td><td><code>Archive</code></td></tr>
+      <tr><td>Collect log files</td><td><code>extension</code></td><td><code>log</code></td><td><code>Logs</code></td></tr>
+    </tbody>
+  </table></div>
+  <h3>Target folder</h3>
+  <p>The target folder is always inside the folder you scan. Sub-folders like <code>Work/Reports</code> are fine. Not allowed: full paths, drive letters, <code>..</code>, the characters <code>&lt; &gt; : " | ? *</code>, Windows names like <code>CON</code> or <code>NUL</code>, and names that end with a dot or space. A rule with an invalid target is skipped, and a warning is written to the log.</p>
+  <h3>Manage rules</h3>
+  <ul>
+    <li>Click the dot in the first column (or press <kbd>Space</kbd>) to switch a rule on or off.</li>
+    <li>Double-click a rule or use <strong>Edit</strong> to change it.</li>
+    <li>Use <kbd>↑</kbd> and <kbd>↓</kbd> to change the order. Remember: the first match wins.</li>
+    <li>Rules don't use sub-categories. The target folder is used exactly as you typed it.</li>
+  </ul>
+  <p>Rules are saved in <code>rules.json</code>. If another program (for example a sync tool) blocks that file, the scan stops with a message instead of sorting without your rules.</p>
+
+  <h2 id="not-moved">Why wasn't a file moved?</h2>
+  <p>After a scan, the <strong>Log</strong> tab shows how many files were skipped. The usual reasons:</p>
+  <ul>
+    <li>It's a system file, shortcut, temporary file or a download that's still running.</li>
+    <li>It's hidden and <strong>Include hidden files</strong> is off.</li>
+    <li>It's in a sub-folder and <strong>Scan subdirectories</strong> is off.</li>
+    <li>It's inside a Git project, a link or a junction, or already in a category folder.</li>
+    <li>A file with the same name as the category folder is in the way.</li>
+    <li>A scan limit (depth, number of folders, time) was reached.</li>
+    <li>It's already in the right place.</li>
+  </ul>
+  <p><strong>A file went into the wrong folder?</strong> Add a <a href="#rules">rule</a>. Rules are checked before the normal sorting.</p>
+
+  <h2 id="messages">Messages</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Message</th><th>What it means</th></tr></thead>
+    <tbody>
+      <tr><td>“… is an unusual folder” / “Scan this folder anyway?”</td><td>You're about to scan a whole drive, your home folder, a system folder or a Git project. Only confirm if you really mean it. Your answer is remembered.</td></tr>
+      <tr><td>“Auto-organize paused”</td><td>The folder wasn't found (for example an unplugged drive), or it's an unusual folder you haven't confirmed.</td></tr>
+      <tr><td>“Simple Organizer is already running.”</td><td>Only one copy can run. Switch to the window that's already open.</td></tr>
+      <tr><td>“rules.json could not be read” / “Rules not available”</td><td>Another program (sync tool, antivirus) is blocking the file. Try again in a moment.</td></tr>
+      <tr><td>“… online-only … not staged”</td><td>OneDrive files that are only online aren't staged, because that would download them. Organize without staging mode.</td></tr>
+      <tr><td>“Something went wrong”</td><td>An unexpected error. Details are in <code>error.log</code>. Please <a href="help.html#report">report it</a> and attach the file.</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Windows</h3>
+  <ul>
+    <li>Duplicates on a network drive can't go to the Recycle Bin, because network drives don't have one. They're left where they are instead of being deleted.</li>
+  </ul>
+  <h3>Linux</h3>
+  <ul>
+    <li>Dialogs have square corners. Rounded corners need window transparency, which only works on Windows.</li>
+    <li>Drag and drop doesn't work: install <code>tkinterdnd2</code> with pip.</li>
+  </ul>
+
+  <h2 id="more">More in the wiki</h2>
+  <p>The <a href="https://github.com/FreakySneaky787/Simple-Organizer/wiki">Simple Organizer wiki</a> has more pages about:</p>
+  <ul>
+    <li><a href="https://github.com/FreakySneaky787/Simple-Organizer/wiki/Staging-Mode">Staging mode</a></li>
+    <li><a href="https://github.com/FreakySneaky787/Simple-Organizer/wiki/Undo-and-History">Undo and history</a></li>
+    <li><a href="https://github.com/FreakySneaky787/Simple-Organizer/wiki/Auto-Organize">Auto-organize</a></li>
+    <li><a href="https://github.com/FreakySneaky787/Simple-Organizer/wiki/Duplicates">Duplicates</a></li>
+    <li><a href="https://github.com/FreakySneaky787/Simple-Organizer/wiki/Data-and-Settings">Data and settings</a></li>
+    <li><a href="https://github.com/FreakySneaky787/Simple-Organizer/wiki/Changelog">Full changelog</a></li>
+  </ul>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

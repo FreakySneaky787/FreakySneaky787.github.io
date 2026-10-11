@@ -107,8 +107,8 @@ python3 main.py</pre>
 
   <h2 id="how">How the project works</h2>
   <h3>Releases</h3>
-  <p>Work is committed locally and only pushed to GitHub together with a release. Between releases nothing goes to GitHub, so the <code>main</code> branch always matches the newest published version. That means the code you see on GitHub is exactly what you're running.</p>
-  <p>Release day is the only day something is pushed, always in this order:</p>
+  <p>Work is committed locally and normally pushed to GitHub together with a release, so the <code>main</code> branch usually matches the newest published version. Sometimes work for the next version is pushed earlier. The release tags (for example <code>v1.0.3</code>) always match exactly what was published, so the code you're running is the tag of your version.</p>
+  <p>On release day the steps are always in this order:</p>
   <ol>
     <li><code>git push</code></li>
     <li>Build</li>

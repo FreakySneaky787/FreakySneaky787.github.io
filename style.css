@@ -160,8 +160,10 @@ figure{margin:0 0 26px}
   background:var(--soft);color:var(--sub);font-size:14px}
 .frame::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9%;min-height:14px;background:var(--line)}
 .frame span{position:relative;z-index:1;background:var(--paper);border:1px solid var(--line);padding:4px 11px;font-size:13px}
+.shot{display:block;width:100%;height:auto;border:1px solid var(--line);background:#1e1e2e}
+.gallery a:focus-visible .shot,.gallery a:hover .shot{border-color:var(--text)}
 figcaption{font-size:14px;color:var(--sub);margin-top:8px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
 .gallery figure{margin:0}
 
 /* ---------- downloads ---------- */
@@ -194,6 +196,7 @@ kbd{font-size:13px;border:1px solid var(--line);border-bottom-width:2px;border-r
 .checklist{list-style:none;padding:0}
 .checklist li{position:relative;padding-left:28px}
 .checklist li::before{content:"";position:absolute;left:2px;top:6px;width:13px;height:13px;border:2px solid var(--text)}
+.checklist li.done::before{background:var(--text);box-shadow:inset 0 0 0 2px var(--paper)}
 .pill{display:inline-block;font-size:11px;font-weight:700;padding:0 8px;border:1.5px solid var(--sub);color:var(--sub);vertical-align:5px;margin-left:10px;line-height:20px;letter-spacing:.05em;text-transform:uppercase}
 .pill.next{border-color:var(--red);color:var(--red)}
 .when{color:var(--sub);margin:-4px 0 14px}

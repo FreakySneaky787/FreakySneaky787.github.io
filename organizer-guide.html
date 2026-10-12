@@ -35,7 +35,7 @@
 
 <div class="page-head"><div class="wrap">
   <h1>Simple Organizer user guide</h1>
-  <p class="meta">For version 3.4.4 · <a href="organizer.html">Back to Simple Organizer</a></p>
+  <p class="meta">For version 3.4.5 · <a href="organizer.html">Back to Simple Organizer</a></p>
 </div></div>
 
 <div class="wrap docs">
@@ -103,7 +103,7 @@
   <ul>
     <li>System files like <code>desktop.ini</code>, <code>Thumbs.db</code> and <code>.DS_Store</code></li>
     <li>Shortcuts: <code>.lnk</code>, <code>.url</code>, <code>.desktop</code>, <code>.webloc</code></li>
-    <li>Downloads that are still running, temporary files and Office lock files</li>
+    <li>Downloads that are still running (and the empty file Firefox creates for them), temporary files and the lock files of Office and LibreOffice</li>
     <li>Simple Organizer itself, so you can keep the program in your Downloads folder</li>
     <li>Hidden files, unless you turn on <strong>Include hidden files</strong></li>
   </ul>
@@ -115,7 +115,7 @@
   <div class="scroll"><table>
     <thead><tr><th>Condition</th><th>Matches</th><th>Example value</th></tr></thead>
     <tbody>
-      <tr><td><code>extension</code></td><td>Files with this extension (also works for <code>tar.gz</code>)</td><td><code>pdf</code></td></tr>
+      <tr><td><code>extension</code></td><td>Files with this extension (also works for <code>tar.gz</code>; <code>.pdf</code> and <code>*.pdf</code> work too). One extension per rule</td><td><code>pdf</code></td></tr>
       <tr><td><code>name_pattern</code></td><td>File names matching a pattern, upper/lower case doesn't matter</td><td><code>invoice_*.pdf</code></td></tr>
       <tr><td><code>min_size_mb</code></td><td>Files at least this big (in MB)</td><td><code>100</code></td></tr>
       <tr><td><code>max_size_mb</code></td><td>Files at most this big (in MB)</td><td><code>10</code></td></tr>

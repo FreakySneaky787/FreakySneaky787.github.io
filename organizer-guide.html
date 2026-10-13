@@ -35,7 +35,7 @@
 
 <div class="page-head"><div class="wrap">
   <h1>Simple Organizer user guide</h1>
-  <p class="meta">For version 3.4.5 · <a href="organizer.html">Back to Simple Organizer</a></p>
+  <p class="meta">For version 3.5.0 · <a href="organizer.html">Back to Simple Organizer</a></p>
 </div></div>
 
 <div class="wrap docs">
@@ -58,13 +58,13 @@
 <main id="main" class="content">
   <h2 id="first-run">Your first run</h2>
   <ol>
-    <li>Start Simple Organizer. The first time, it picks your <code>Downloads</code> folder. After that it remembers the last folder you used.</li>
+    <li>Start Simple Organizer. The first time, it picks your <code>Downloads</code> folder. After that it remembers the last folder you used, even while its drive is unplugged.</li>
     <li>To choose another folder, click <strong>Browse…</strong> in the top bar.</li>
     <li>Click <strong>Scan</strong> (<kbd>Ctrl</kbd> + <kbd>R</kbd>). Nothing is moved yet. The <strong>Preview</strong> tab lists every file that would be moved and where it would go.</li>
-    <li>Look through the list. Right-click a row to open the source or target folder, or to copy a path.</li>
+    <li>Look through the list. Use the search field (<kbd>Ctrl</kbd> + <kbd>F</kbd>) to find files and click a column heading to sort. To keep a file where it is, select it and press <kbd>Space</kbd> or <kbd>Delete</kbd> (or right-click → <strong>Don't move</strong>). <strong>Export CSV…</strong> saves the list.</li>
     <li>Click <strong>Organize</strong> (<kbd>Ctrl</kbd> + <kbd>O</kbd>). You'll see how many files will be moved and how big they are. Confirm, and the files are moved into category folders inside the folder you scanned.</li>
   </ol>
-  <p>To reverse it, click <strong>Undo last</strong> (<kbd>Ctrl</kbd> + <kbd>Z</kbd>).</p>
+  <p>To reverse it, click <strong>Undo last</strong> (<kbd>Ctrl</kbd> + <kbd>Z</kbd>). The question tells you which run and folder it will restore. If you change a scan option or a rule after scanning, the list is cleared — just scan again.</p>
 
   <h2 id="window">The window</h2>
   <div class="scroll"><table>
@@ -111,7 +111,7 @@
   <h2 id="rules">Rules</h2>
   <p>Rules send files to a folder you choose, before the normal sorting by file type. They're checked from top to bottom, and the first rule that matches wins.</p>
   <h3>Create a rule</h3>
-  <p>Open the <strong>Rules</strong> tab and click <strong>Add rule</strong>. Every rule has a name, a condition, a value, a target folder, and can be switched on or off.</p>
+  <p>Open the <strong>Rules</strong> tab and click <strong>Add rule</strong>. Every rule has a name, one or more conditions, a target folder, and can be switched on or off. With <strong>Add condition</strong> a rule gets more conditions; it then only matches files that meet <em>all</em> of them.</p>
   <div class="scroll"><table>
     <thead><tr><th>Condition</th><th>Matches</th><th>Example value</th></tr></thead>
     <tbody>
@@ -131,6 +131,7 @@
       <tr><td>Put large files aside</td><td><code>min_size_mb</code></td><td><code>500</code></td><td><code>Large files</code></td></tr>
       <tr><td>Archive old files</td><td><code>older_than_days</code></td><td><code>365</code></td><td><code>Archive</code></td></tr>
       <tr><td>Collect log files</td><td><code>extension</code></td><td><code>log</code></td><td><code>Logs</code></td></tr>
+      <tr><td>Archive old PDFs only</td><td><code>extension</code> + <code>older_than_days</code></td><td><code>pdf</code> + <code>365</code></td><td><code>Archive</code></td></tr>
     </tbody>
   </table></div>
   <h3>Target folder</h3>

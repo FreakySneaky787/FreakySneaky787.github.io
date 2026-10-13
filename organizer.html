@@ -38,13 +38,13 @@
     <img src="organizer-icon.png" width="48" height="48" alt="">
     <div>
       <h1>Simple Organizer</h1>
-      <p class="meta">Version 3.4.5 · released 12 October 2026 · Windows 10/11 and Linux · MIT License</p>
+      <p class="meta">Version 3.5.0 · released 13 October 2026 · Windows 10/11 and Linux · MIT License</p>
     </div>
   </div>
   <div class="actions">
-    <a class="btn org" href="download.html#organizer">Download for Windows <span class="size">(13.4 MB)</span></a>
+    <a class="btn org" href="download.html#organizer">Download for Windows <span class="size">(12.1 MB)</span></a>
     <a class="btn plain" href="organizer-guide.html">User guide</a>
-    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.4.5">Release notes</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.5.0">Release notes</a>
     <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer">Source code</a>
   </div>
 </div></div>
@@ -70,7 +70,7 @@
 
 <main id="main" class="content">
   <figure>
-    <a href="img/organizer.webp"><img class="shot" src="img/organizer-small.webp" width="960" height="620" alt="Simple Organizer in the dark theme: the Preview tab lists 21 files of a Downloads folder with their category and destination folder"></a>
+    <a href="img/organizer.webp"><img class="shot" src="img/organizer-small.webp" width="960" height="620" alt="Simple Organizer in the dark theme: the Preview tab with its search field lists the files of a Downloads folder with category and destination; two files are set to Don't move"></a>
     <figcaption>Simple Organizer with the Preview tab open.</figcaption>
   </figure>
 
@@ -99,9 +99,9 @@
   <div class="scroll"><table>
     <thead><tr><th>Feature</th><th>What it does</th></tr></thead>
     <tbody>
-      <tr><th>Preview</th><td>A scan only plans the moves. You see the result before anything happens.</td></tr>
-      <tr><th>Undo</th><td>Undo the last run, or any of the last 20 manual and 20 automatic runs, in any order.</td></tr>
-      <tr><th>Rules</th><td>Your own sorting rules by file extension, name pattern, size or age. For example: everything with “invoice” in the name goes to <code>Invoices</code>. <a href="organizer-guide.html#rules">How rules work</a></td></tr>
+      <tr><th>Preview</th><td>A scan only plans the moves. You see the result before anything happens, can search and sort it, keep single files where they are with <strong>Don't move</strong>, and export it as a CSV file.</td></tr>
+      <tr><th>Undo</th><td>Undo the last run, or any of the last 20 manual and 20 automatic runs, in any order. The history shows which folder each run belongs to.</td></tr>
+      <tr><th>Rules</th><td>Your own sorting rules by file extension, name pattern, size or age, also combined. For example: everything with “invoice” in the name goes to <code>Invoices</code>, or PDFs older than a year go to <code>Archive</code>. <a href="organizer-guide.html#rules">How rules work</a></td></tr>
       <tr><th>Staging mode</th><td>Collect moves first, then commit or revert them together.</td></tr>
       <tr><th>Auto-organize</th><td>Sorts the folder on a schedule while the program is open.</td></tr>
       <tr><th>Duplicate finder</th><td>Finds files that are exactly the same. Copies go to the Recycle Bin or Trash only if you confirm.</td></tr>
@@ -124,9 +124,12 @@
   <div class="scroll"><table>
     <thead><tr><th>Keys</th><th>Action</th></tr></thead>
     <tbody>
-      <tr><td><kbd>Ctrl</kbd> + <kbd>R</kbd></td><td>Scan</td></tr>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>R</kbd> or <kbd>F5</kbd></td><td>Scan</td></tr>
       <tr><td><kbd>Ctrl</kbd> + <kbd>O</kbd></td><td>Organize</td></tr>
       <tr><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td><td>Undo last run</td></tr>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td><td>Search the Preview</td></tr>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>1</kbd> … <kbd>4</kbd></td><td>Preview, Duplicates, Log, Rules</td></tr>
+      <tr><td><kbd>Space</kbd> or <kbd>Delete</kbd></td><td>Don't move the selected files (Preview)</td></tr>
       <tr><td><kbd>Ctrl</kbd> + <kbd>Q</kbd></td><td>Quit (waits for a running task to finish)</td></tr>
     </tbody>
   </table></div>
@@ -134,7 +137,7 @@
   <h2 id="install">Installation</h2>
   <h3>Windows 10 and 11</h3>
   <ol>
-    <li><a href="download.html#organizer">Download</a> <code>simple_organizer_windows_v3.4.5.zip</code>.</li>
+    <li><a href="download.html#organizer">Download</a> <code>simple_organizer_windows_v3.5.0.zip</code>.</li>
     <li>Extract the ZIP file.</li>
     <li>Start <code>simple_organizer.exe</code>.</li>
   </ol>
@@ -166,6 +169,7 @@ python3 main.py</pre>
   <div class="scroll"><table>
     <thead><tr><th>Version</th><th>Date</th><th>Main changes</th></tr></thead>
     <tbody>
+      <tr><th>3.5.0</th><td class="num">13 Oct 2026</td><td>Don't move single files; search, sort and CSV export in the Preview; rules with several conditions; history shows the folder of every run; Auto-organize can be paused after an undo and never switches to another folder; starts about twice as fast; tests run on GitHub Actions.</td></tr>
       <tr><th>3.4.5</th><td class="num">12 Oct 2026</td><td>13 fixes from the fourth review; a rules file in the wrong text encoding no longer stops the start; read-only files move between drives without leftover copies; Trash keeps the last copy of a duplicate; LibreOffice lock files and running Firefox downloads are left alone; opens the real Downloads folder on first start.</td></tr>
       <tr><th>3.4.4</th><td class="num">9 Oct 2026</td><td>23 fixes from the third review; new Programs and Disk Images categories; no leftover copies when moving between drives; Desktop shortcuts are never moved; only one instance can run; errors are saved to <code>error.log</code>.</td></tr>
       <tr><th>3.4.3</th><td class="num">8 Oct 2026</td><td>15 fixes; OneDrive online-only files skipped in the duplicate check; scheduled runs continue after a restart; log capped at 5,000 lines; window size and position remembered better.</td></tr>
@@ -177,8 +181,6 @@ python3 main.py</pre>
   <h2 id="planned">Planned</h2>
   <p>Things I'd like to add. There are no dates for these yet. See also the <a href="roadmap.html#organizer">roadmap</a>.</p>
   <ul>
-    <li>Search and filter in the Preview tab</li>
-    <li>Export scan results as CSV or HTML</li>
     <li>Watch mode that sorts new files as soon as they appear</li>
     <li>Flatpak or AppImage package for Linux</li>
     <li>Code-signed Windows version, so SmartScreen doesn't warn anymore</li>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roadmap – Simple-Project</title>
-<meta name="description" content="What's planned for Simple OS 1.0.5, 1.1 and 2.0 (Debian 13), and for Simple Organizer.">
+<meta name="description" content="What's planned for Simple OS 1.1 and 2.0 (Debian 13), and for Simple Organizer.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fffdf9">
@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://freakysneaky787.github.io/roadmap.html">
 <link rel="canonical" href="https://freakysneaky787.github.io/roadmap.html">
 <meta property="og:title" content="Roadmap – Simple-Project">
-<meta property="og:description" content="What's planned for Simple OS 1.0.5, 1.1 and 2.0 (Debian 13), and for Simple Organizer.">
+<meta property="og:description" content="What's planned for Simple OS 1.1 and 2.0 (Debian 13), and for Simple Organizer.">
 <meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
 <script src="script.js" defer></script>
 </head>
@@ -44,7 +44,7 @@
   <nav class="toc" aria-label="On this page">
     <strong>On this page</strong>
     <ul>
-      <li><a href="#v105">Simple OS 1.0.5</a></li>
+      <li><a href="#v105">Simple OS 1.0.5 (released)</a></li>
       <li><a href="#v104">Simple OS 1.0.4 (released)</a></li>
       <li><a href="#v11">Simple OS 1.1</a></li>
       <li><a href="#v20">Simple OS 2.0</a></li>
@@ -56,13 +56,19 @@
 </aside>
 
 <main id="main" class="content">
-  <h2 id="v105">Simple OS 1.0.5<span class="pill next">Next</span></h2>
-  <p class="when">Bug-fix release · planned for early November 2026</p>
-  <ul>
-    <li>Battery level of Bluetooth headphones (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/37">#37</a>)</li>
-    <li>A “Default apps” page in the Control Center: browser, mail, PDF and more (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/38">#38</a>)</li>
-    <li>A “Startup apps” page: turn programs that start at login on and off (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/39">#39</a>)</li>
-    <li>Whatever 1.0.4 users report</li>
+  <h2 id="v105">Simple OS 1.0.5<span class="pill">Released</span></h2>
+  <p class="when">Bug-fix release with a new ISO · released 17 October 2026 · <a href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.0.5">Release notes</a></p>
+  <p>Tested on a Lenovo ThinkPad E16 and in virtual machines, including an installation next to Windows.</p>
+  <ul class="checklist">
+    <li class="done">Clearer menus: the right-click menu has Apps, Settings, Tools and Help, and the Control Center has smaller pages</li>
+    <li class="done">A “Default apps” page: browser, mail, PDF and more (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/38">#38</a>)</li>
+    <li class="done">Startup apps: switch off programs that start at login, or add one (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/39">#39</a>)</li>
+    <li class="done">Battery level of Bluetooth headphones (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/37">#37</a>)</li>
+    <li class="done">A calendar when you click the clock (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/45">#45</a>)</li>
+    <li class="done">Next to Windows: the clock stays right, and a note about Windows “fast startup” (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/46">#46</a>)</li>
+    <li class="done">A “What's new” window after updates (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/65">#65</a>)</li>
+    <li class="done">Signing out and in again keeps the power button, night light and update messages working</li>
+    <li class="done">Search with a Swiss, German or French keyboard: Y and Z are no longer swapped</li>
   </ul>
 
   <h2 id="v104">Simple OS 1.0.4<span class="pill">Released</span></h2>
@@ -88,8 +94,7 @@
     <li><strong>Display scaling</strong> for high-resolution screens: a Scale setting from 100 to 200% in Control Center → Display</li>
     <li><strong>Language &amp; Region</strong> page, and translations of the Simple OS tools</li>
     <li>A small app to test the webcam</li>
-    <li>A calendar that opens when you click the clock in the taskbar</li>
-    <li>Better dual boot with Windows: a warning about Windows Fast Startup and a note about the clock</li>
+    <li>A <strong>Users &amp; accounts</strong> page: add and remove users, change passwords and pictures, automatic login (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/68">#68</a>)</li>
     <li>Faster start and smaller system: smaller initramfs, AppArmor profiles, zstd compression (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a>)</li>
     <li>Tests on more hardware: NVIDIA desktop, AMD laptop, dual boot with Windows, Secure Boot</li>
   </ul>

@@ -160,7 +160,7 @@ figure{margin:0 0 26px}
   background:var(--soft);color:var(--sub);font-size:14px}
 .frame::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9%;min-height:14px;background:var(--line)}
 .frame span{position:relative;z-index:1;background:var(--paper);border:1px solid var(--line);padding:4px 11px;font-size:13px}
-.shot{display:block;width:100%;height:auto;border:1px solid var(--line);background:#1e1e2e}
+.shot{display:block;width:100%;height:auto;max-width:100%;border:1px solid var(--line);background:#1e1e2e}
 .gallery a:focus-visible .shot,.gallery a:hover .shot{border-color:var(--text)}
 figcaption{font-size:14px;color:var(--sub);margin-top:8px}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}

@@ -38,13 +38,13 @@
     <img src="organizer-icon.png" width="48" height="48" alt="">
     <div>
       <h1>Simple Organizer</h1>
-      <p class="meta">Version 3.5.1 · released 16 October 2026 · Windows 10/11 and Linux · MIT License</p>
+      <p class="meta">Version 3.5.2 · released 19 October 2026 · Windows 10/11 and Linux · MIT License</p>
     </div>
   </div>
   <div class="actions">
-    <a class="btn org" href="download.html#organizer">Download for Windows <span class="size">(12.1 MB)</span></a>
+    <a class="btn org" href="download.html#organizer">Download for Windows <span class="size">(12.2 MB)</span></a>
     <a class="btn plain" href="organizer-guide.html">User guide</a>
-    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.5.1">Release notes</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.5.2">Release notes</a>
     <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer">Source code</a>
   </div>
 </div></div>
@@ -137,15 +137,15 @@
   <h2 id="install">Installation</h2>
   <h3>Windows 10 and 11</h3>
   <ol>
-    <li><a href="download.html#organizer">Download</a> <code>simple_organizer_windows_v3.5.1.zip</code>.</li>
+    <li><a href="download.html#organizer">Download</a> <code>simple_organizer_windows_v3.5.2.zip</code>.</li>
     <li>Extract the ZIP file.</li>
     <li>Start <code>simple_organizer.exe</code>.</li>
   </ol>
   <div class="note"><p>The program isn't code-signed yet, so Windows SmartScreen may show a warning. Right-click the file, open <strong>Properties</strong> and tick <strong>Unblock</strong>.</p></div>
 
   <h3>Linux</h3>
-  <p><strong>Debian 12+, Ubuntu 22.04+:</strong> <a href="https://github.com/FreakySneaky787/Simple-Organizer/releases/download/v3.5.1/simple-organizer_3.5.1_all.deb">download the package</a> and install it. Simple Organizer then appears in the app menu. It works on Simple OS too.</p>
-  <pre>sudo apt install ./simple-organizer_3.5.1_all.deb</pre>
+  <p><strong>Debian 12+, Ubuntu 22.04+:</strong> <a href="https://github.com/FreakySneaky787/Simple-Organizer/releases/download/v3.5.2/simple-organizer_3.5.2_all.deb">download the package</a> and install it. Simple Organizer then appears in the app menu. It works on Simple OS too.</p>
+  <pre>sudo apt install ./simple-organizer_3.5.2_all.deb</pre>
   <p><strong>Other distributions:</strong> you need Python 3.10 or newer with Tkinter.</p>
   <pre># Fedora / Bazzite
 sudo dnf install python3-tkinter
@@ -168,6 +168,7 @@ python3 main.py</pre>
   <div class="scroll"><table>
     <thead><tr><th>Version</th><th>Date</th><th>Main changes</th></tr></thead>
     <tbody>
+      <tr><th>3.5.2</th><td class="num">19 Oct 2026</td><td>9 fixes: files named like category folders are moved in the right order; a folder named like a rule target keeps its files; category folders in any case on Windows; <code>backup_1.tar.gz</code> on name conflicts; brackets in filename patterns; Linux names that are not valid UTF-8 in CSV export and Trash; safer undo.</td></tr>
       <tr><th>3.5.1</th><td class="num">16 Oct 2026</td><td>6 fixes: Don't move is kept after a restart; duplicates are only trashed if the kept copy has the same content; history can't be left empty by a power cut; files and folders named like a category and the folders of rules are sorted correctly.</td></tr>
       <tr><th>3.5.0</th><td class="num">13 Oct 2026</td><td>Don't move single files; search, sort and CSV export in the Preview; rules with several conditions; history shows the folder of every run; Auto-organize can be paused after an undo and never switches to another folder; starts about twice as fast; tests run on GitHub Actions.</td></tr>
       <tr><th>3.4.5</th><td class="num">12 Oct 2026</td><td>13 fixes from the fourth review; a rules file in the wrong text encoding no longer stops the start; read-only files move between drives without leftover copies; Trash keeps the last copy of a duplicate; LibreOffice lock files and running Firefox downloads are left alone; opens the real Downloads folder on first start.</td></tr>

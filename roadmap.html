@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roadmap – Simple-Project</title>
-<meta name="description" content="What's planned for Simple OS 1.1 and 2.0 (Debian 13), and for Simple Organizer.">
+<meta name="description" content="What's planned for Simple OS 1.0.7, 1.1, 1.2 and 2.0 (Debian 13), and for Simple Organizer.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fffdf9">
@@ -45,10 +45,12 @@
   <nav class="toc" aria-label="On this page">
     <strong>On this page</strong>
     <ul>
+      <li><a href="#v107">Simple OS 1.0.7</a></li>
       <li><a href="#v106">Simple OS 1.0.6 (released)</a></li>
       <li><a href="#v105">Simple OS 1.0.5 (released)</a></li>
       <li><a href="#v104">Simple OS 1.0.4 (released)</a></li>
       <li><a href="#v11">Simple OS 1.1</a></li>
+      <li><a href="#v12">Simple OS 1.2</a></li>
       <li><a href="#v20">Simple OS 2.0</a></li>
       <li><a href="#ideas">Ideas</a></li>
       <li><a href="#open">Open issues</a></li>
@@ -58,6 +60,18 @@
 </aside>
 
 <main id="main" class="content">
+  <h2 id="v107">Simple OS 1.0.7<span class="pill next">Next</span></h2>
+  <p class="when">Bug-fix release with a new ISO · planned for Saturday, 31 October 2026</p>
+  <p>Tested on a Lenovo ThinkPad E16 and in virtual machines, including the update from 1.0.6.</p>
+  <ul class="checklist">
+    <li class="done">The power button on the lock screen puts the computer to sleep instead of shutting it down (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/97">#97</a>)</li>
+    <li class="done">Sleep locks the screen once instead of two or three times (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/96">#96</a>)</li>
+    <li class="done">Dates in your language's order: taskbar clock, calendar, login and lock screen (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/81">#81</a>)</li>
+    <li class="done">A keyboard plugged in later types with your account's layout (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/98">#98</a>)</li>
+    <li class="done">Software Updates checks the free disk space before installing (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/91">#91</a>)</li>
+    <li class="done">A single “60 Hz” instead of “60 Hz” and “59.95 Hz” (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/78">#78</a>), leftover build files removed (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/99">#99</a>)</li>
+  </ul>
+
   <h2 id="v106">Simple OS 1.0.6<span class="pill">Released</span></h2>
   <p class="when">Bug-fix release with a new ISO · released 24 October 2026 · <a href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.0.6">Release notes</a></p>
   <ul class="checklist">
@@ -104,14 +118,22 @@
   </ul>
 
   <h2 id="v11">Simple OS 1.1<span class="pill">Planned</span></h2>
-  <p class="when">Feature release · about 2–3 months after 1.0</p>
+  <p class="when">Feature release · planned around 7 November 2026</p>
   <ul>
-    <li><strong>Display scaling</strong> for high-resolution screens: a Scale setting from 100 to 200% in Control Center → Display</li>
-    <li><strong>Language &amp; Region</strong> page, and translations of the Simple OS tools</li>
-    <li>A small app to test the webcam</li>
-    <li>A <strong>Users &amp; accounts</strong> page: add and remove users, change passwords and pictures, automatic login (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/68">#68</a>)</li>
-    <li>Faster start and smaller system: smaller initramfs, AppArmor profiles, zstd compression (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a>)</li>
+    <li><strong>Display scaling</strong> for high-resolution screens: a Scale setting from 100 to 200% in Control Center → Display, with a larger taskbar and clock (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/41">#41</a>)</li>
+    <li><strong>Language &amp; Region</strong> page: system language and formats (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/42">#42</a>)</li>
+    <li>Faster start and smaller system: smaller initramfs, zstd compression (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/47">#47</a>, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a>)</li>
+    <li>A small app to test the webcam (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/44">#44</a>)</li>
     <li>Tests on more hardware: NVIDIA desktop, AMD laptop, dual boot with Windows, Secure Boot</li>
+  </ul>
+
+  <h2 id="v12">Simple OS 1.2<span class="pill">Planned</span></h2>
+  <p class="when">Feature release after 1.1</p>
+  <ul>
+    <li><strong>Translations</strong> of the Simple OS tools (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/43">#43</a>)</li>
+    <li>A <strong>Users &amp; accounts</strong> page: add and remove users, change passwords and pictures, automatic login (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/68">#68</a>)</li>
+    <li>AppArmor profiles (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/48">#48</a>)</li>
+    <li><strong>Windows programs</strong>: open .exe and .msi files with Bottles, and an honest help page about what works (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/85">#85</a>)</li>
   </ul>
 
   <h2 id="v20">Simple OS 2.0 on Debian 13<span class="pill">Planned</span></h2>

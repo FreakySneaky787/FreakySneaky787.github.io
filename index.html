@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Simple-Project</title>
-<meta name="description" content="Simple-Project: Simple OS, a Linux distribution based on Debian 12, and Simple Organizer, a file sorter for Windows and Linux.">
+<meta name="description" content="Simple-Project: Simple OS, a Linux distribution based on Debian 12, Simple Organizer, a file sorter for Windows and Linux, and YAK, a small kernel written in Rust.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fffdf9">
@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://freakysneaky787.github.io/">
 <link rel="canonical" href="https://freakysneaky787.github.io/">
 <meta property="og:title" content="Simple-Project">
-<meta property="og:description" content="Simple-Project: Simple OS, a Linux distribution based on Debian 12, and Simple Organizer, a file sorter for Windows and Linux.">
+<meta property="og:description" content="Simple-Project: Simple OS, a Linux distribution based on Debian 12, Simple Organizer, a file sorter for Windows and Linux, and YAK, a small kernel written in Rust.">
 <meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
 <script src="script.js" defer></script>
 </head>
@@ -24,6 +24,7 @@
   <nav class="site-nav" aria-label="Main">
     <a href="simple-os.html">Simple OS</a>
     <a href="organizer.html">Organizer</a>
+    <a href="yak.html">YAK</a>
     <a href="download.html">Download</a>
     <a href="roadmap.html">Roadmap</a>
     <a href="help.html">Help</a>
@@ -36,8 +37,8 @@
 <div class="page-head hero"><div class="wrap">
   <div>
     <h1>Simple-Project</h1>
-    <p class="lead">A small open-source project from Switzerland. I write software for people who want their computer to just work. So far there are two programs: an operating system and a file organizer.</p>
-    <p class="meta">Both are free. The code is on <a href="https://github.com/FreakySneaky787">GitHub</a>.</p>
+    <p class="lead">A small open-source project from Switzerland. I write software for people who want their computer to just work. So far there are three projects: an operating system, a file organizer and a small kernel for learning.</p>
+    <p class="meta">All of them are free. The code is on <a href="https://github.com/FreakySneaky787">GitHub</a>.</p>
   </div>
 
   <div class="tiles">
@@ -57,6 +58,14 @@
         <div class="links"><a class="btn org" href="download.html#organizer">Download</a><a href="organizer.html">Learn more</a></div>
       </div>
     </div>
+    <div class="tile">
+      <svg width="46" height="46" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="5" fill="#1d1d1b"/><path d="M9 13l7 7-7 7" fill="none" stroke="#e0743c" stroke-width="3.5" stroke-linecap="square"/><path d="M19 28h12" stroke="#ece8e1" stroke-width="3.5"/></svg>
+      <div>
+        <h2><a href="yak.html">YAK</a><span class="ver">1.0.0</span></h2>
+        <p>Yet Another Kernel: a small x86-64 operating system written from scratch in Rust, for learning how a kernel works. Runs in QEMU.</p>
+        <div class="links"><a class="btn yak" href="download.html#yak">Download</a><a href="yak.html">Learn more</a></div>
+      </div>
+    </div>
   </div>
 </div></div>
 
@@ -64,6 +73,14 @@
 <main id="main">
   <h2>News</h2>
   <div class="news">
+    <article>
+      <time class="date" datetime="2026-10-27"><span>Oct</span><b>27</b><span>2026</span></time>
+      <div>
+        <h3><span class="label yak">YAK</span>YAK 1.0.0 is out</h3>
+        <p>A new project: YAK – Yet Another Kernel – is a small x86-64 operating system written from scratch in Rust, made for learning how a kernel works. It boots with BIOS and UEFI in QEMU and has its own scheduler for several cores, processes with 53 syscalls, a FAT32 disk driver, networking with TCP, DHCP and DNS, and a shell with pipes and scripts. Each release comes with a ready-made ISO and disk image, so you can try it without building anything.</p>
+        <a href="yak.html">About YAK</a>
+      </div>
+    </article>
     <article>
       <time class="date" datetime="2026-10-24"><span>Oct</span><b>24</b><span>2026</span></time>
       <div>
@@ -207,6 +224,7 @@
     <ul style="margin:0;padding-left:18px">
       <li><a href="https://github.com/FreakySneaky787/Simple-OS">Simple-OS</a> <span class="sub small">GPL-3.0</span></li>
       <li><a href="https://github.com/FreakySneaky787/Simple-Organizer">Simple-Organizer</a> <span class="sub small">MIT</span></li>
+      <li><a href="https://github.com/FreakySneaky787/yak-kernel">yak-kernel</a> <span class="sub small">GPL-3.0</span></li>
     </ul>
   </div>
 </aside>
@@ -215,11 +233,11 @@
 <footer class="site-foot"><div class="wrap">
   <div class="cols">
     <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
-    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="yak.html">YAK</a></li><li><a href="download.html">Download</a></li></ul></div>
     <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li></ul></div>
     <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
   </div>
-  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS and YAK are licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
 </div></footer>
 
 </body>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Download – Simple-Project</title>
-<meta name="description" content="Download Simple OS 1.0.6 and Simple Organizer 3.5.2.">
+<meta name="description" content="Download Simple OS 1.0.6, Simple Organizer 3.5.2 and YAK 1.0.0.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fffdf9">
@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://freakysneaky787.github.io/download.html">
 <link rel="canonical" href="https://freakysneaky787.github.io/download.html">
 <meta property="og:title" content="Download – Simple-Project">
-<meta property="og:description" content="Download Simple OS 1.0.6 and Simple Organizer 3.5.2.">
+<meta property="og:description" content="Download Simple OS 1.0.6, Simple Organizer 3.5.2 and YAK 1.0.0.">
 <meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
 <script src="script.js" defer></script>
 </head>
@@ -24,6 +24,7 @@
   <nav class="site-nav" aria-label="Main">
     <a href="simple-os.html">Simple OS</a>
     <a href="organizer.html">Organizer</a>
+    <a href="yak.html">YAK</a>
     <a href="download.html" aria-current="page">Download</a>
     <a href="roadmap.html">Roadmap</a>
     <a href="help.html">Help</a>
@@ -35,7 +36,7 @@
 
 <div class="page-head"><div class="wrap">
   <h1>Download</h1>
-  <p class="lead">Both programs are free. The files are hosted on GitHub.</p>
+  <p class="lead">Everything is free. The files are hosted on GitHub.</p>
 </div></div>
 
 <div class="wrap home">
@@ -100,11 +101,41 @@
 
   <div class="note"><p>Windows SmartScreen may warn you because the program isn't code-signed yet. Right-click the file, open <strong>Properties</strong> and tick <strong>Unblock</strong>.</p></div>
 
+  <h2 id="yak">YAK 1.0.0</h2>
+  <p class="sub">Released 27 October 2026 · runs in QEMU on Linux · <a href="yak.html">About YAK</a></p>
+
+  <div class="dl-card">
+    <div class="dl-main">
+      <svg width="42" height="42" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="5" fill="#1d1d1b"/><path d="M9 13l7 7-7 7" fill="none" stroke="#e0743c" stroke-width="3.5" stroke-linecap="square"/><path d="M19 28h12" stroke="#ece8e1" stroke-width="3.5"/></svg>
+      <div class="file"><strong>yak-1.0.0.iso</strong><span>Kernel and bootloader, BIOS and UEFI · 16.1 MB</span></div>
+      <a class="btn yak" href="https://github.com/FreakySneaky787/yak-kernel/releases/download/v1.0.0/yak-1.0.0.iso">Download ISO</a>
+    </div>
+    <div class="dl-hash">
+      <span class="k">SHA-256</span>
+      <code>7319396c58c6400fd5d4071568ca1b5728d4dc6ed26fe0e329f0daf5a201847a</code>
+      <button type="button" class="copy" data-copy="7319396c58c6400fd5d4071568ca1b5728d4dc6ed26fe0e329f0daf5a201847a">Copy</button>
+    </div>
+  </div>
+
+  <p>To run YAK you need the ISO, the disk image and the start script in one folder, and QEMU. The <a href="yak.html#try">YAK page</a> explains how to start it.</p>
+
+  <h3>All files</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>File</th><th>What it is</th><th>Size</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/FreakySneaky787/yak-kernel/releases/download/v1.0.0/yak-1.0.0.iso">yak-1.0.0.iso</a></td><td>Kernel and bootloader</td><td class="num">16.1 MB</td></tr>
+      <tr><td><a href="https://github.com/FreakySneaky787/yak-kernel/releases/download/v1.0.0/yak-1.0.0-disk.img.gz">yak-1.0.0-disk.img.gz</a></td><td>FAT32 disk with <code>/bin</code> and sample files</td><td class="num">552 KB</td></tr>
+      <tr><td><a href="https://github.com/FreakySneaky787/yak-kernel/releases/download/v1.0.0/run-yak.sh">run-yak.sh</a></td><td>Starts YAK in QEMU</td><td class="num">1.8 KB</td></tr>
+      <tr><td><a href="https://github.com/FreakySneaky787/yak-kernel/releases/download/v1.0.0/SHA256SUMS">SHA256SUMS</a></td><td>Checksums for all files (<code>sha256sum -c SHA256SUMS</code>)</td><td class="num">245 bytes</td></tr>
+    </tbody>
+  </table></div>
+
   <h2 id="older">Older versions</h2>
   <p>All previous versions and their release notes are on GitHub:</p>
   <ul>
     <li><a href="https://github.com/FreakySneaky787/Simple-OS/releases">Simple OS releases</a></li>
     <li><a href="https://github.com/FreakySneaky787/Simple-Organizer/releases">Simple Organizer releases</a></li>
+    <li><a href="https://github.com/FreakySneaky787/yak-kernel/releases">YAK releases</a></li>
   </ul>
 </main>
 
@@ -113,6 +144,7 @@
     <h3>Which one do I need?</h3>
     <p><strong>Simple OS</strong> replaces the operating system on a computer, for example Windows. You install it from a USB stick.</p>
     <p><strong>Simple Organizer</strong> is a normal program that runs on Windows or Linux and tidies up your folders.</p>
+    <p><strong>YAK</strong> is a small kernel for learning. It runs in the QEMU emulator, not on your real computer.</p>
   </div>
   <div class="box">
     <h3>After downloading</h3>
@@ -131,11 +163,11 @@
 <footer class="site-foot"><div class="wrap">
   <div class="cols">
     <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
-    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="yak.html">YAK</a></li><li><a href="download.html">Download</a></li></ul></div>
     <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li></ul></div>
     <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
   </div>
-  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS is licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS and YAK are licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
 </div></footer>
 
 </body>

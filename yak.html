@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YAK – Simple-Project</title>
+<meta name="description" content="YAK (Yet Another Kernel) is a small x86-64 operating system written from scratch in Rust, for learning how a kernel works. Runs in QEMU, free and open source.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fffdf9">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/yak.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/yak.html">
+<meta property="og:title" content="YAK – Simple-Project">
+<meta property="og:description" content="YAK (Yet Another Kernel) is a small x86-64 operating system written from scratch in Rust, for learning how a kernel works. Runs in QEMU, free and open source.">
+<meta property="og:image" content="https://freakysneaky787.github.io/img/yak-shell.webp">
+<script src="script.js" defer></script>
+</head>
+<body class="yak">
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html">Organizer</a>
+    <a href="yak.html" aria-current="page">YAK</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <div class="title">
+    <svg width="48" height="48" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="5" fill="#1d1d1b"/><path d="M9 13l7 7-7 7" fill="none" stroke="#e0743c" stroke-width="3.5" stroke-linecap="square"/><path d="M19 28h12" stroke="#ece8e1" stroke-width="3.5"/></svg>
+    <div>
+      <h1>YAK – Yet Another Kernel</h1>
+      <p class="meta">Version 1.0.0 · released 27 October 2026 · x86-64, runs in QEMU · GPL-3.0-or-later</p>
+    </div>
+  </div>
+  <div class="actions">
+    <a class="btn yak" href="download.html#yak">Download <span class="size">(ISO + disk image)</span></a>
+    <a class="btn plain" href="https://freakysneaky787.github.io/yak-kernel/">Documentation</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/yak-kernel/releases/tag/v1.0.0">Release notes</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/yak-kernel">Source code</a>
+  </div>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#what">What it is</a></li>
+      <li><a href="#features">What's in it</a></li>
+      <li><a href="#try">Try it</a></li>
+      <li><a href="#build">Build it yourself</a></li>
+      <li><a href="#supported">Supported environment</a></li>
+      <li><a href="#docs">Documentation</a></li>
+      <li><a href="#tests">Tests</a></li>
+      <li><a href="#license">License</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content">
+  <figure>
+    <a href="img/yak-shell.webp"><img class="shot" src="img/yak-shell-small.webp" width="960" height="600" alt="The YAK shell running in a QEMU window, showing the output of uname, cpu, netinfo, ps and df"></a>
+    <figcaption>The YAK shell in QEMU: <code>uname</code>, <code>cpu</code>, <code>netinfo</code>, <code>ps</code> and <code>df</code>.</figcaption>
+  </figure>
+
+  <h2 id="what">What it is</h2>
+  <p>YAK is a small x86-64 operating system written from scratch in Rust. It's made for learning how a kernel works: by reading it, running it, testing it and changing it. It runs in QEMU, with BIOS and UEFI.</p>
+  <p>Everything is our own code. The only crates are <code>limine</code> (boot protocol) and <code>spin</code> (locks). The project is developed together with an AI assistant.</p>
+  <p>YAK is a hobby and learning project. It is not a Linux replacement, not POSIX-compatible, not a desktop system and not a driver collection for real hardware. Next comes a course: a chapter-by-chapter walk through the kernel on its own website.</p>
+
+  <h2 id="features">What's in it</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Area</th><th>What YAK does</th></tr></thead>
+    <tbody>
+      <tr><th>Boot</th><td>Limine boot protocol, BIOS and UEFI, higher-half kernel</td></tr>
+      <tr><th>CPU</th><td>Own GDT/TSS/IDT, local APIC and I/O APIC, every core from the ACPI MADT started via INIT/SIPI, SMEP/SMAP, x87/SSE/AVX state per thread</td></tr>
+      <tr><th>Memory</th><td>Bitmap frame allocator, 4-level paging, guarded kernel stacks, kernel heap, demand-paged user heaps and stacks</td></tr>
+      <tr><th>Scheduling</th><td>Preemptive round-robin SMP scheduler, kernel and user threads, futexes, sleeping mutexes</td></tr>
+      <tr><th>Processes</th><td>Ring 3, one address space per process, ELF loader, 53 syscalls, signals, pipes, environment variables</td></tr>
+      <tr><th>Storage</th><td>PCI, AHCI SATA driver with MSI, sector cache, FAT32 with long file names – persistent across reboots</td></tr>
+      <tr><th>Network</th><td>e1000, Ethernet/ARP/IPv4/ICMP/UDP/TCP, DHCP, DNS client, <code>wget</code> and <code>httpd</code></td></tr>
+      <tr><th>User space</th><td><code>/bin/sh</code> with pipes, redirection, scripts, <code>if</code>/<code>while</code>/<code>for</code>/<code>case</code>, functions, <code>$(...)</code> and jobs; a full-screen editor and 37 more programs</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="try">Try it</h2>
+  <p>You don't need to build anything. Every release from 1.0 on has ready-made files on the <a href="download.html#yak">download page</a>: the ISO (kernel and bootloader, boots with BIOS and UEFI), the FAT32 disk image with <code>/bin</code> and sample files, the start script <code>run-yak.sh</code> and <code>SHA256SUMS</code>.</p>
+  <p>Put the files of one release into a folder, install QEMU (package <code>qemu-system-x86</code> on Fedora, Debian and Ubuntu), then run:</p>
+  <pre>sha256sum -c SHA256SUMS     # the files arrived intact
+./run-yak.sh                # QEMU window; the serial console is in this terminal
+./run-yak.sh --headless     # no window (Ctrl+A X quits QEMU)
+./run-yak.sh --uefi /usr/share/OVMF/OVMF_CODE_4M.fd   # through UEFI</pre>
+  <p>On Fedora the UEFI firmware is at <code>/usr/share/edk2/ovmf/OVMF_CODE.fd</code>. The disk image is unpacked on the first start and keeps what you write to it. Delete <code>yak-1.0.0-disk.img</code> to start fresh.</p>
+  <p>Things to try in the shell: <code>help</code>, <code>ls /bin</code>, <code>cat /README.txt | wc</code>, <code>ps</code>, <code>cpu</code>, <code>ping 10.0.2.2</code>, <code>edit notes.txt</code>.</p>
+  <div class="note"><p>The keyboard layout is German (QWERTZ) by default.</p></div>
+
+  <h2 id="build">Build it yourself</h2>
+  <p>To change YAK you need the source. Rust comes from <a href="https://rustup.rs/">rustup</a>; the exact nightly compiler is pinned in <code>rust-toolchain.toml</code>. You also need QEMU, <code>xorriso</code>, <code>dosfstools</code>, <code>mtools</code>, <code>make</code>, <code>gcc</code>, <code>binutils</code>, <code>git</code> and <code>python3</code> (and OVMF for UEFI).</p>
+  <pre>git clone https://github.com/FreakySneaky787/yak-kernel.git
+cd yak-kernel
+rustup toolchain install   # reads rust-toolchain.toml
+make deps                  # checks the host tools
+make run                   # build everything and boot in QEMU
+make check                 # all tests</pre>
+  <p>The first build downloads the Limine binaries into <code>vendor/limine</code>.</p>
+
+  <h2 id="supported">Supported environment</h2>
+  <p>YAK runs in QEMU only. “Supported” means <code>make check</code> passes there, locally and in CI on every push.</p>
+  <div class="scroll"><table>
+    <thead><tr><th></th><th>Supported (tested)</th><th>Not supported / untested</th></tr></thead>
+    <tbody>
+      <tr><th>Emulator</th><td>QEMU, machine q35, TCG (no KVM needed)</td><td>KVM, other emulators, real hardware</td></tr>
+      <tr><th>Firmware</th><td>BIOS (SeaBIOS) and UEFI (OVMF)</td><td></td></tr>
+      <tr><th>CPU</th><td>1 to 4 cores, CPU models <code>max</code> and <code>qemu64</code></td><td>More than 4 cores</td></tr>
+      <tr><th>RAM</th><td>256 MiB (default); BIOS works down to 24 MiB, UEFI needs 160 MiB</td><td></td></tr>
+      <tr><th>Devices</th><td>AHCI SATA disk with FAT32, e1000, PS/2 keyboard, COM1, framebuffer</td><td>USB, NVMe, virtio, other network cards</td></tr>
+      <tr><th>Host</th><td>Linux: Ubuntu 24.04 and Fedora</td><td>macOS, Windows</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="docs">Documentation</h2>
+  <p>The whole documentation is on its own website as a book with navigation and search: <a href="https://freakysneaky787.github.io/yak-kernel/">freakysneaky787.github.io/yak-kernel</a>.</p>
+  <ul>
+    <li><strong>Walkthrough</strong> – start here: four tours through the code (boot, a key press, a pipeline, a page fault)</li>
+    <li><strong>Experiments</strong> – change one thing, predict what happens, observe</li>
+    <li><strong>Hacking</strong> – how to add a syscall, a program, a test or a shell built-in</li>
+    <li><strong>Learn</strong> – short explanations of every subsystem, in the order they were built</li>
+    <li><strong>Design</strong> – the architecture and the reasons behind each decision</li>
+    <li><strong>Bugs</strong> – every bug found so far: symptom, cause, fix and test</li>
+  </ul>
+
+  <h2 id="tests">Tests</h2>
+  <ul>
+    <li><code>make test</code> runs unit tests and integration test kernels headless in QEMU.</li>
+    <li><code>make e2e</code> and <code>make e2e-uefi</code> boot the real system and type commands into the shell over the serial port.</li>
+    <li><code>syscheck</code> throws bad pointers, lengths, descriptors and random syscalls at the kernel.</li>
+    <li>CI runs <code>make check</code> on fresh Ubuntu and Fedora machines for every push and pull request.</li>
+    <li><code>make stress</code> runs everything many times. It's the release gate and takes about 30 minutes.</li>
+  </ul>
+
+  <h2 id="license">License</h2>
+  <p>YAK is free software under the GNU General Public License, version 3 or later (GPL-3.0-or-later). Anyone may use, study, change and share it; whoever distributes it or a changed version must pass on the source code under the same license.</p>
+  <p>The bundled Terminus font keeps its SIL Open Font License, and the Limine bootloader keeps its own license.</p>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="yak.html">YAK</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS and YAK are licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

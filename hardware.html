@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hardware – Simple-Project</title>
+<meta name="description" content="Computers Simple OS is known to work on, what didn&#39;t work, known limitations, and how to report your computer.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fffdf9">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/hardware.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/hardware.html">
+<meta property="og:title" content="Hardware – Simple-Project">
+<meta property="og:description" content="Computers Simple OS is known to work on, what didn&#39;t work, known limitations, and how to report your computer.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html">Organizer</a>
+    <a href="yak.html">YAK</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>Hardware</h1>
+  <p class="lead">Simple OS doesn't promise to run on every computer. These are the computers it is known to work on – tested by us or reported by people who use it – and what didn't work.</p>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#tested">Tested computers</a></li>
+      <li><a href="#vm">Virtual machines</a></li>
+      <li><a href="#wanted">Not tested yet</a></li>
+      <li><a href="#limits">Known limitations</a></li>
+      <li><a href="#report">Report your computer</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content">
+  <p>Your computer isn't listed? It may still work. Start it from the USB stick first: the live session changes nothing on the computer. Then <a href="#report">tell us how it went</a>, so the next person knows. Last updated: 29 October 2026 (Simple OS 1.0.7).</p>
+
+  <h2 id="tested">Tested computers</h2>
+  <p>✅ works · ⚠️ works, with a limitation below · ❌ doesn't work · – not tested yet · Monitor: an external monitor or projector</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Computer · firmware · version</th><th>Install</th><th style="white-space:nowrap">Wi-Fi</th><th>Sound</th><th>Graphics</th><th>Brightness</th><th>Suspend</th><th>Monitor</th></tr></thead>
+    <tbody>
+      <tr><th style="white-space:normal">Lenovo ThinkPad E16 Gen 3<br><span class="sub small">UEFI, Secure Boot off · 1.0.7</span></th><td>✅</td><td>⚠️</td><td>✅</td><td>✅</td><td>–</td><td>✅</td><td>–</td></tr>
+      <tr><th style="white-space:normal">Lenovo ThinkBook<br><span class="sub small">UEFI, Secure Boot off · 1.0.4</span></th><td>✅</td><td>✅</td><td>–</td><td>–</td><td>✅</td><td>–</td><td>✅</td></tr>
+      <tr><th style="white-space:normal">Dell OptiPlex 9020<br><span class="sub small">Legacy BIOS, dual boot · 1.0.3</span></th><td>❌</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>Lenovo ThinkPad E16 Gen 3</strong> (21TF: Intel Core 5 210H, Intel graphics, Intel Wi-Fi) is in daily use. Wi-Fi: with one router, the 5 GHz connection on a wide 160 MHz channel was slow. Setting the network to 2.4 GHz in Control Center → Wi-Fi fixed it. Sound includes Bluetooth headphones. Suspend and waking up were checked with 1.0.7.</p>
+  <p><strong>Lenovo ThinkBook</strong> has run Simple OS since 1.0. Bluetooth keyboards and phones pair, and a monitor plugged in later turns on by itself. The power button has to be held for about a second; the firmware ignores a quick tap.</p>
+  <p><strong>Dell OptiPlex 9020</strong> (desktop): with 1.0.3, the installer could leave the disk unable to start (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/62">#62</a>, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/64">#64</a>). This was fixed in 1.0.4 and tested in a virtual machine set up like this computer (legacy BIOS, MBR, “Install alongside” in an extended partition). A test on the real computer is still to come.</p>
+
+  <h2 id="vm">Virtual machines</h2>
+  <p>Releases are tested in QEMU/KVM before they are published: installing with legacy BIOS, with UEFI, and with UEFI and Secure Boot on (Microsoft keys), and updating from the previous version. In virt-manager (SPICE) the screen size follows the window, and copy and paste works between the virtual machine and your computer.</p>
+
+  <h2 id="wanted">Not tested yet – help wanted</h2>
+  <ul>
+    <li>A desktop with an <strong>NVIDIA</strong> graphics card and the NVIDIA driver</li>
+    <li>A laptop with <strong>AMD</strong> graphics</li>
+    <li><strong>Dual boot with Windows</strong> on a real computer</li>
+    <li><strong>Secure Boot on</strong> with an installed system on a real computer</li>
+    <li>Older <strong>Mac</strong> laptops (Intel). They usually need the Broadcom Wi-Fi driver.</li>
+  </ul>
+
+  <h2 id="limits">Known limitations</h2>
+  <ul>
+    <li><strong>64-bit PCs only</strong> (x86-64). There's no version for ARM computers (Raspberry Pi, Apple Silicon Macs) or 32-bit PCs.</li>
+    <li><strong>The NVIDIA driver only works with Secure Boot off.</strong> The driver is built on your computer, and the firmware doesn't know its signature. Turn Secure Boot off in the firmware settings, then install the driver in Control Center → System &amp; Updates → Hardware &amp; Drivers.</li>
+    <li><strong>GeForce RTX 50 cards:</strong> the NVIDIA driver in Debian 12 doesn't support them yet, so Hardware &amp; Drivers doesn't offer it. The picture works with the free driver, without 3D acceleration.</li>
+    <li><strong>Broadcom Wi-Fi</strong> (many older laptops and Macs) needs an extra driver from Hardware &amp; Drivers. That needs an internet connection by cable or through a phone (USB tethering) first.</li>
+    <li><strong>One display scale for all screens.</strong> Simple OS uses X11, which has no separate scale per monitor. With a 4K laptop screen and a normal external monitor, the main screen decides.</li>
+    <li><strong>Lenovo laptops</strong> may show “Self-Healing BIOS ESP” once on the first start after installing. That's harmless and doesn't come back.</li>
+  </ul>
+
+  <h2 id="report">Report your computer</h2>
+  <ol>
+    <li>Open a <a href="https://github.com/FreakySneaky787/Simple-OS/issues/new?template=hardware_report.yml">hardware report</a> on GitHub. It asks for the same columns as the table above.</li>
+    <li>In Simple OS, Menu → Help → Report a Problem creates a text file on your desktop with the hardware details (model, graphics, Wi-Fi chip, sound). Please attach it.</li>
+  </ol>
+  <p>Your computer then gets a row here, and anything that didn't work becomes an issue of its own.</p>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="yak.html">YAK</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="hardware.html">Hardware</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS and YAK are licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

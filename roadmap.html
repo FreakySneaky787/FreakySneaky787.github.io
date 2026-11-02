@@ -37,7 +37,7 @@
 <div class="page-head"><div class="wrap">
   <h1>Roadmap</h1>
   <p class="lead">What I'm working on next. This is a plan, not a promise: dates and order can change, mostly depending on feedback.</p>
-  <p class="meta">Last updated on 14 October 2026.</p>
+  <p class="meta">Last updated on 2 November 2026.</p>
 </div></div>
 
 <div class="wrap docs">
@@ -45,11 +45,12 @@
   <nav class="toc" aria-label="On this page">
     <strong>On this page</strong>
     <ul>
+      <li><a href="#v11">Simple OS 1.1</a></li>
       <li><a href="#v107">Simple OS 1.0.7 (released)</a></li>
       <li><a href="#v106">Simple OS 1.0.6 (released)</a></li>
       <li><a href="#v105">Simple OS 1.0.5 (released)</a></li>
       <li><a href="#v104">Simple OS 1.0.4 (released)</a></li>
-      <li><a href="#v11">Simple OS 1.1</a></li>
+      <li><a href="#v111">Simple OS 1.1.1</a></li>
       <li><a href="#v12">Simple OS 1.2</a></li>
       <li><a href="#v20">Simple OS 2.0</a></li>
       <li><a href="#ideas">Ideas</a></li>
@@ -60,6 +61,19 @@
 </aside>
 
 <main id="main" class="content">
+  <h2 id="v11">Simple OS 1.1<span class="pill next">Next</span></h2>
+  <p class="when">Feature release with a new ISO · planned for Thursday, 5 November 2026</p>
+  <p>Tested on a Lenovo ThinkPad E16 and in virtual machines, including the update from 1.0.7 and an encrypted installation.</p>
+  <ul class="checklist">
+    <li class="done"><strong>Display scaling</strong> for high-resolution screens: Control Center → Display → Scale, automatic or 100 to 200 % (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/41">#41</a>)</li>
+    <li class="done">A <strong>Large taskbar</strong> with a bigger clock (Control Center → Appearance → Taskbar)</li>
+    <li class="done"><strong>Language &amp; Region</strong> page: system language and formats for dates, numbers and currency (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/42">#42</a>)</li>
+    <li class="done">A <strong>Camera</strong> app: see the webcam and take photos (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/44">#44</a>)</li>
+    <li class="done">Starts quicker: a much smaller initramfs (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/47">#47</a>), a faster live session and installation (zstd, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a>); encrypted installations no longer wait 30 seconds at every start</li>
+    <li class="done">“Safely remove” only for USB drives, never for a second internal disk (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/100">#100</a>)</li>
+    <li class="done">A public <a href="hardware.html">hardware page</a> and a form to report your computer (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/92">#92</a>)</li>
+  </ul>
+
   <h2 id="v107">Simple OS 1.0.7<span class="pill">Released</span></h2>
   <p class="when">Bug-fix release with a new ISO · released 30 October 2026 · <a href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.0.7">Release notes</a></p>
   <p>Tested on a Lenovo ThinkPad E16 and in virtual machines, including the update from 1.0.6.</p>
@@ -117,23 +131,21 @@
     <li class="done">Confirmed on real hardware: night light, microphone, external monitors, Mouse &amp; Touchpad, Date &amp; Time, Bluetooth pairing with a keyboard and phone</li>
   </ul>
 
-  <h2 id="v11">Simple OS 1.1<span class="pill">Planned</span></h2>
-  <p class="when">Feature release · planned around 7 November 2026</p>
+  <h2 id="v111">Simple OS 1.1.1<span class="pill">Planned</span></h2>
+  <p class="when">Bug-fix release after 1.1</p>
   <ul>
-    <li><strong>Display scaling</strong> for high-resolution screens: a Scale setting from 100 to 200% in Control Center → Display, with a larger taskbar and clock (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/41">#41</a>)</li>
-    <li><strong>Language &amp; Region</strong> page: system language and formats (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/42">#42</a>)</li>
-    <li>Faster start and smaller system: smaller initramfs, zstd compression (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/47">#47</a>, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a>)</li>
-    <li>A small app to test the webcam (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/44">#44</a>)</li>
-    <li>Tests on more hardware: NVIDIA desktop, AMD laptop, dual boot with Windows, Secure Boot</li>
+    <li>Menus that close again after a slow click: the desktop and window menus, the volume slider and the network and sound menus in the taskbar (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/104">#104</a>)</li>
   </ul>
 
   <h2 id="v12">Simple OS 1.2<span class="pill">Planned</span></h2>
-  <p class="when">Feature release after 1.1</p>
+  <p class="when">Feature release after 1.1 · the last feature release of 1.x – after it, 1.2.x gets only fixes and the work goes into Simple OS 2.0 on Debian 13</p>
   <ul>
     <li><strong>Translations</strong> of the Simple OS tools (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/43">#43</a>)</li>
     <li>A <strong>Users &amp; accounts</strong> page: add and remove users, change passwords and pictures, automatic login (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/68">#68</a>)</li>
     <li>AppArmor profiles (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/48">#48</a>)</li>
     <li><strong>Windows programs</strong>: open .exe and .msi files with Bottles, and an honest help page about what works (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/85">#85</a>)</li>
+    <li>A <strong>simpler partitioning page</strong> in the installer (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/101">#101</a>)</li>
+    <li>Tests on more hardware: NVIDIA desktop, AMD laptop, dual boot with Windows, Secure Boot (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/49">#49</a>) – <a href="hardware.html#report">report your computer</a></li>
   </ul>
 
   <h2 id="v20">Simple OS 2.0 on Debian 13<span class="pill">Planned</span></h2>

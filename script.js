@@ -42,3 +42,22 @@ if (tocLinks.length && 'IntersectionObserver' in window) {
     if (section) observer.observe(section);
   });
 }
+
+// Long news lists: show the newest few and a button for the rest
+document.querySelectorAll('.news[data-show]').forEach(list => {
+  const hidden = [...list.querySelectorAll(':scope > article')].slice(Number(list.dataset.show));
+  if (!hidden.length) return;
+  hidden.forEach(article => article.classList.add('more'));
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn plain news-more';
+  button.textContent = `Show all news (${hidden.length} more)`;
+  button.addEventListener('click', () => {
+    hidden.forEach(article => article.classList.remove('more'));
+    button.remove();
+    const heading = hidden[0].querySelector('h3');
+    heading.tabIndex = -1;
+    heading.focus();
+  });
+  list.after(button);
+});

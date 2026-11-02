@@ -140,6 +140,8 @@ ol > li::marker{font-weight:700}
 .news h3{margin:2px 0 6px;font-size:18px}
 .news p{margin:0 0 6px}
 .news a{font-size:15px}
+.news article.more{display:none}
+.news-more{margin-top:12px}
 .label{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;vertical-align:2px;margin-right:8px;letter-spacing:.04em;text-transform:uppercase;border:1.5px solid currentColor}
 .label.os{color:var(--red)}
 .label.org{color:var(--org)}

@@ -37,7 +37,7 @@
 <div class="page-head"><div class="wrap">
   <h1>Roadmap</h1>
   <p class="lead">What I'm working on next. This is a plan, not a promise: dates and order can change, mostly depending on feedback.</p>
-  <p class="meta">Last updated on 2 November 2026.</p>
+  <p class="meta">Last updated on 3 November 2026.</p>
 </div></div>
 
 <div class="wrap docs">
@@ -45,92 +45,17 @@
   <nav class="toc" aria-label="On this page">
     <strong>On this page</strong>
     <ul>
-      <li><a href="#v11">Simple OS 1.1 (released)</a></li>
-      <li><a href="#v107">Simple OS 1.0.7 (released)</a></li>
-      <li><a href="#v106">Simple OS 1.0.6 (released)</a></li>
-      <li><a href="#v105">Simple OS 1.0.5 (released)</a></li>
-      <li><a href="#v104">Simple OS 1.0.4 (released)</a></li>
       <li><a href="#v111">Simple OS 1.1.1</a></li>
       <li><a href="#v12">Simple OS 1.2</a></li>
       <li><a href="#v20">Simple OS 2.0</a></li>
+      <li><a href="#v2x">Simple OS 2.1 to 2.3</a></li>
       <li><a href="#ideas">Ideas</a></li>
-      <li><a href="#open">Open issues</a></li>
       <li><a href="#organizer">Simple Organizer</a></li>
     </ul>
   </nav>
 </aside>
 
 <main id="main" class="content">
-  <h2 id="v11">Simple OS 1.1<span class="pill">Released</span></h2>
-  <p class="when">Feature release with a new ISO · released 5 November 2026 · <a href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.1">Release notes</a></p>
-  <p>Tested on a Lenovo ThinkPad E16 and in virtual machines, including the update from 1.0.7 and an encrypted installation.</p>
-  <ul class="checklist">
-    <li class="done"><strong>Display scaling</strong> for high-resolution screens: Control Center → Display → Scale, automatic or 100 to 200 % (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/41">#41</a>)</li>
-    <li class="done">A <strong>Large taskbar</strong> with a bigger clock (Control Center → Appearance → Taskbar)</li>
-    <li class="done"><strong>Language &amp; Region</strong> page: system language and formats for dates, numbers and currency (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/42">#42</a>)</li>
-    <li class="done">A <strong>Camera</strong> app: see the webcam and take photos (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/44">#44</a>)</li>
-    <li class="done">Starts quicker: a much smaller initramfs (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/47">#47</a>), a faster live session and installation (zstd, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a>); encrypted installations no longer wait 30 seconds at startup</li>
-    <li class="done">“Safely remove” only for USB drives, never for a second internal disk (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/100">#100</a>)</li>
-    <li class="done">A public <a href="hardware.html">hardware page</a> and a form to report your computer (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/92">#92</a>)</li>
-  </ul>
-
-  <h2 id="v107">Simple OS 1.0.7<span class="pill">Released</span></h2>
-  <p class="when">Bug-fix release with a new ISO · released 30 October 2026 · <a href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.0.7">Release notes</a></p>
-  <p>Tested on a Lenovo ThinkPad E16 and in virtual machines, including the update from 1.0.6.</p>
-  <ul class="checklist">
-    <li class="done">The power button on the lock screen puts the computer to sleep instead of shutting it down (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/97">#97</a>)</li>
-    <li class="done">Sleep locks the screen once instead of two or three times (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/96">#96</a>)</li>
-    <li class="done">Dates in your language's order: taskbar clock, calendar, login and lock screen (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/81">#81</a>)</li>
-    <li class="done">A keyboard plugged in later types with your account's layout (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/98">#98</a>)</li>
-    <li class="done">Software Updates checks the free disk space before installing (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/91">#91</a>)</li>
-    <li class="done">A single “60 Hz” instead of “60 Hz” and “59.95 Hz” (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/78">#78</a>), leftover build files removed (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/99">#99</a>)</li>
-  </ul>
-
-  <h2 id="v106">Simple OS 1.0.6<span class="pill">Released</span></h2>
-  <p class="when">Bug-fix release with a new ISO · released 24 October 2026 · <a href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.0.6">Release notes</a></p>
-  <ul class="checklist">
-    <li class="done">Control Center → Wi-Fi lists the networks again, online and offline (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/76">#76</a>)</li>
-    <li class="done">Closing the Software Center during an installation no longer stops it halfway (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/83">#83</a>)</li>
-    <li class="done">Choose the app for documents, spreadsheets and presentations (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/75">#75</a>)</li>
-    <li class="done">Refresh rates: no more three times “60 Hz” (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/78">#78</a>)</li>
-    <li class="done">Search finds dates like 2026-10-20 instead of calculating them (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/82">#82</a>)</li>
-    <li class="done">Installing next to Windows without internet: the clock stays right (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/73">#73</a>)</li>
-    <li class="done">“What's new” also for older accounts (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/79">#79</a>), text fixes (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/80">#80</a>), release tools (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/71">#71</a>, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/72">#72</a>, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/77">#77</a>)</li>
-    <li class="done">Signing in again after the screen locked itself: no more black screen (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/88">#88</a>)</li>
-  </ul>
-
-  <h2 id="v105">Simple OS 1.0.5<span class="pill">Released</span></h2>
-  <p class="when">Bug-fix release with a new ISO · released 17 October 2026 · <a href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.0.5">Release notes</a></p>
-  <p>Tested on a Lenovo ThinkPad E16 and in virtual machines, including an installation next to Windows.</p>
-  <ul class="checklist">
-    <li class="done">Clearer menus: the right-click menu has Apps, Settings, Tools and Help, and the Control Center has smaller pages</li>
-    <li class="done">A “Default apps” page: browser, mail, PDF and more (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/38">#38</a>)</li>
-    <li class="done">Startup apps: switch off programs that start at login, or add one (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/39">#39</a>)</li>
-    <li class="done">Battery level of Bluetooth headphones (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/37">#37</a>)</li>
-    <li class="done">A calendar when you click the clock (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/45">#45</a>)</li>
-    <li class="done">Next to Windows: the clock stays right, and a note about Windows “fast startup” (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/46">#46</a>)</li>
-    <li class="done">A “What's new” window after updates (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/65">#65</a>)</li>
-    <li class="done">Signing out and in again keeps the power button, night light and update messages working</li>
-    <li class="done">Search with a Swiss, German or French keyboard: Y and Z are no longer swapped</li>
-  </ul>
-
-  <h2 id="v104">Simple OS 1.0.4<span class="pill">Released</span></h2>
-  <p class="when">Bug-fix release with a new ISO · released 14 October 2026 · <a href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.0.4">Release notes</a></p>
-  <p>Tested on a Lenovo ThinkPad E16, and in virtual machines set up like an older BIOS PC (Dell OptiPlex 9020) and a UEFI laptop with Secure Boot.</p>
-  <ul class="checklist">
-    <li class="done">The screen locks when you leave, and videos keep it on (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/25">#25</a>)</li>
-    <li class="done">The power button opens the power menu instead of shutting down at once (on some laptops: hold it for about a second)</li>
-    <li class="done">Brightness slider in Control Center → Display</li>
-    <li class="done">Wi-Fi country set automatically from the time zone</li>
-    <li class="done"><code>git</code> included</li>
-    <li class="done">Installer: runs only once, no switching off while it works, “remove the USB stick” before the restart (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/62">#62</a>, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/64">#64</a>)</li>
-    <li class="done">Setup Wizard skips the internet step when you're online (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/63">#63</a>)</li>
-    <li class="done">Installations in other languages get their language and language packs (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/31">#31</a>)</li>
-    <li class="done">No “new keyring” prompt after the first login (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/32">#32</a>)</li>
-    <li class="done">Install next to another system on older BIOS PCs; other systems stay in the boot menu after updates</li>
-    <li class="done">Confirmed on real hardware: night light, microphone, external monitors, Mouse &amp; Touchpad, Date &amp; Time, Bluetooth pairing with a keyboard and phone</li>
-  </ul>
-
   <h2 id="v111">Simple OS 1.1.1<span class="pill next">Next</span></h2>
   <p class="when">Bug-fix release after 1.1</p>
   <ul>
@@ -159,30 +84,45 @@
       <tr><td>Simple OS 2.0</td><td>When the upgrade has been tested on several real computers</td></tr>
     </tbody>
   </table></div>
-  <p><strong>What happens to existing installs?</strong> Not decided yet. The preferred way is a guided upgrade tool that creates a restore point first. The alternative is a fresh install that takes your home folder along.</p>
+  <p><strong>What happens to existing installs?</strong> A guided “Upgrade to Simple OS 2.0” tool that creates a restore point first (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/52">#52</a>). A fresh install that takes your home folder along stays as the fallback.</p>
+  <p>2.0 brings only the new base and everything 1.x has by then. New features start with 2.1.</p>
+
+  <h2 id="v2x">Simple OS 2.1 to 2.3<span class="pill">Planned</span></h2>
+  <p class="when">Feature releases after 2.0, one theme each, every two to three months · the order may change with what you report</p>
+  <h3>2.1 – Keep your data safe</h3>
+  <ul>
+    <li><strong>Backups of your personal files</strong>, not only the system (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/89">#89</a>)</li>
+    <li>A <strong>recovery assistant</strong> in the boot menu that brings back a restore point when the desktop no longer starts (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/108">#108</a>)</li>
+    <li><strong>Choose when updates are installed</strong>: when you shut down or at a set time (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/109">#109</a>), and optional automatic security updates (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/54">#54</a>)</li>
+    <li>The clipboard history (Super+V) also keeps <strong>pictures</strong>, and you can pin entries (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/110">#110</a>)</li>
+    <li>The split view of the file manager becomes easy to find</li>
+  </ul>
+  <h3>2.2 – Usable for everyone</h3>
+  <ul>
+    <li><strong>Accessibility</strong>: screen reader, large cursor, high-contrast theme (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/56">#56</a>)</li>
+    <li><strong>Fingerprint reader</strong> support with a setup page (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/55">#55</a>)</li>
+    <li>A <strong>Wayland</strong> session to try out, next to the normal one (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/87">#87</a>)</li>
+  </ul>
+  <h3>2.3 – Tools</h3>
+  <ul>
+    <li>Wayland becomes the default; the old session stays as a fallback for a while (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/87">#87</a>)</li>
+    <li>A <strong>screenshot editor</strong>: arrows, text, cropping and blurring private details (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/111">#111</a>)</li>
+    <li>Optional: <strong>RGB lighting and game controllers</strong> (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/112">#112</a>)</li>
+  </ul>
+  <p>Hardware support is not a release of its own: it grows with every update. <a href="hardware.html#report">Report your computer</a> to help.</p>
 
   <h2 id="ideas">Ideas<span class="pill">Not scheduled</span></h2>
   <ul>
-    <li>Optional automatic security updates</li>
-    <li>Fingerprint reader support with a setup page</li>
-    <li>Accessibility: screen reader, large cursor, high-contrast theme</li>
     <li>Help screenshots for printers and scanners</li>
     <li>Sending a problem report to GitHub with one click, privacy first</li>
     <li>Automatic test builds on every change</li>
     <li>A version for ARM computers (low priority)</li>
   </ul>
 
-  <h2 id="open">Open issues</h2>
-  <div class="scroll"><table>
-    <thead><tr><th>Issue</th><th>Status</th></tr></thead>
-    <tbody>
-      <tr><td><a href="https://github.com/FreakySneaky787/Simple-OS/issues/19">#19</a> zstd instead of xz compression</td><td>Decision in 1.1 (the ISO would get about 18% bigger)</td></tr>
-    </tbody>
-  </table></div>
-  <p><a href="https://github.com/FreakySneaky787/Simple-OS/issues">All Simple OS issues on GitHub →</a></p>
+  <p><a href="https://github.com/FreakySneaky787/Simple-OS/issues">All Simple OS issues on GitHub →</a> · Released versions: <a href="https://github.com/FreakySneaky787/Simple-OS/releases">release notes on GitHub</a></p>
 
   <h2 id="organizer">Simple Organizer</h2>
-  <p>The current version is <a href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.5.3">3.5.3</a> (2 November 2026), the third bug-fix update for <a href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.5.0">3.5.0</a>. 3.5.0 added “Don't move”, search, sorting and CSV export in the preview and rules with several conditions. 3.5.1, 3.5.2 and 3.5.3 fix the 20 issues found afterwards. The tests run automatically on GitHub.</p>
+  <p>The current version is <a href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.5.3">3.5.3</a> (2 November 2026).</p>
   <p>No dates yet. These are the next things on the list:</p>
   <ul>
     <li>Watch mode that sorts new files as soon as they appear</li>

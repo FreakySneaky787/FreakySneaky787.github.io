@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Help – Simple-Project</title>
-<meta name="description" content="Frequently asked questions about Simple OS and Simple Organizer, and how to report a problem.">
+<meta name="description" content="Frequently asked questions about Simple OS, Simple Organizer and YAK, and how to report a problem.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fffdf9">
@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://freakysneaky787.github.io/help.html">
 <link rel="canonical" href="https://freakysneaky787.github.io/help.html">
 <meta property="og:title" content="Help – Simple-Project">
-<meta property="og:description" content="Frequently asked questions about Simple OS and Simple Organizer, and how to report a problem.">
+<meta property="og:description" content="Frequently asked questions about Simple OS, Simple Organizer and YAK, and how to report a problem.">
 <meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
 <script src="script.js" defer></script>
 </head>
@@ -47,6 +47,7 @@
       <li><a href="#os">Simple OS</a></li>
       <li><a href="#os-hardware">Simple OS: hardware</a></li>
       <li><a href="#organizer">Simple Organizer</a></li>
+      <li><a href="#yak">YAK</a></li>
       <li><a href="#general">General</a></li>
       <li><a href="#report">Report a problem</a></li>
     </ul>
@@ -136,10 +137,40 @@
   <h3>Does it work on a Mac?</h3>
   <p>No, only Windows 10, Windows 11 and Linux.</p>
 
+  <h2 id="yak">YAK</h2>
+  <p>YAK is a small kernel for learning how an operating system works. How to download, start and build it is on the <a href="yak.html">YAK page</a>.</p>
+
+  <h3>Can I install YAK on my computer?</h3>
+  <p>No. YAK only runs in the QEMU emulator. Real hardware, KVM and other emulators are not supported. YAK is a learning project, not a replacement for Linux or Windows.</p>
+
+  <h3>Does it work on Windows or macOS?</h3>
+  <p>It's only tested on Linux (Ubuntu 24.04 and Fedora). Windows and macOS are untested.</p>
+
+  <h3>Do I need Rust to try it?</h3>
+  <p>No. Every release from 1.0 on has ready-made files: you only need QEMU and the start script <code>run-yak.sh</code>. Rust is only needed if you want to <a href="yak.html#build">change YAK</a>.</p>
+
+  <h3>The keys type the wrong letters.</h3>
+  <p>The keyboard layout is German (QWERTZ) by default. Type <code>layout us</code> for US QWERTY; <code>layout</code> on its own shows the current layout. The setting isn't saved: YAK starts with German again every time.</p>
+
+  <h3>Which commands are there?</h3>
+  <p>Type <code>help</code>. It lists the shell built-ins, the kernel commands and the programs. The programs are also in <code>/bin</code>.</p>
+
+  <h3>How do I quit YAK?</h3>
+  <p>Type <code>poweroff</code>; QEMU closes. If you started it with <code>--headless</code>, you can also press <kbd>Ctrl</kbd> + <kbd>A</kbd>, then <kbd>X</kbd>.</p>
+
+  <h3>Are my files kept?</h3>
+  <p>Yes. The disk image keeps what you write to it, also after a restart. To start fresh, delete <code>yak-1.0.0-disk.img</code>; the next start unpacks a new one.</p>
+
+  <h3>Is there a course?</h3>
+  <p>Yes: <a href="https://freakysneaky787.github.io/yak-kernel/course/index.html">Build a kernel, chapter by chapter</a>. You write an x86-64 kernel in Rust from nothing, one small step at a time; every chapter ends with a kernel that boots in QEMU and passes its own tests. The course isn't finished yet, new chapters are still being added. You need some Rust (ownership, <code>struct</code>/<code>impl</code>, traits, modules), but no kernel or assembly knowledge.</p>
+
+  <h3>YAK doesn't start with UEFI.</h3>
+  <p>Check the path to the UEFI firmware: on Debian and Ubuntu it's <code>/usr/share/OVMF/OVMF_CODE_4M.fd</code> (package <code>ovmf</code>), on Fedora <code>/usr/share/edk2/ovmf/OVMF_CODE.fd</code> (package <code>edk2-ovmf</code>). UEFI also needs at least 160 MiB of RAM; the start script gives QEMU 256 MiB.</p>
+
   <h2 id="general">General</h2>
 
   <h3>Does it cost anything?</h3>
-  <p>No. Both programs are free and open source. Simple OS uses the GPL-3.0 license, Simple Organizer the MIT License.</p>
+  <p>No. All programs are free and open source. Simple OS and YAK use the GPL-3.0 license, Simple Organizer the MIT License.</p>
 
   <h3>Who makes this?</h3>
   <p>Simple-Project is made by FreakySneaky from Switzerland. More on the <a href="about.html">About</a> page.</p>
@@ -163,6 +194,14 @@
     <li>Write what you did and what happened, and which version you use.</li>
     <li>Attach <code>error.log</code> if there is one. On Windows it's in <code>%APPDATA%\simple_organizer\</code>, on Linux in <code>~/.local/share/simple_organizer/</code>.</li>
   </ol>
+
+  <h3>YAK</h3>
+  <ol>
+    <li>Open an issue on <a href="https://github.com/FreakySneaky787/yak-kernel/issues">github.com/FreakySneaky787/yak-kernel/issues</a>.</li>
+    <li>Write what you ran, what you expected and what happened, and which version you use.</li>
+    <li>Copy the serial output. It's in the terminal where you started <code>run-yak.sh</code>. For a kernel panic, copy the whole message.</li>
+  </ol>
+  <p>For the course there are two forms when you open a new issue: <strong>I got stuck in a course chapter</strong> (a build fails, a test is red, or the text and the code don't agree) and <strong>Feedback on the course</strong> (something was unclear, too long or in the wrong order, even if it worked). Please paste output as text, not as a screenshot.</p>
 </main>
 </div>
 

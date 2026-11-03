@@ -53,6 +53,7 @@
       <li><a href="#v111">Simple OS 1.1.1</a></li>
       <li><a href="#v12">Simple OS 1.2</a></li>
       <li><a href="#v20">Simple OS 2.0</a></li>
+      <li><a href="#v2x">Simple OS 2.1 to 2.3</a></li>
       <li><a href="#ideas">Ideas</a></li>
       <li><a href="#open">Open issues</a></li>
       <li><a href="#organizer">Simple Organizer</a></li>
@@ -159,13 +160,35 @@
       <tr><td>Simple OS 2.0</td><td>When the upgrade has been tested on several real computers</td></tr>
     </tbody>
   </table></div>
-  <p><strong>What happens to existing installs?</strong> Not decided yet. The preferred way is a guided upgrade tool that creates a restore point first. The alternative is a fresh install that takes your home folder along.</p>
+  <p><strong>What happens to existing installs?</strong> A guided “Upgrade to Simple OS 2.0” tool that creates a restore point first (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/52">#52</a>). A fresh install that takes your home folder along stays as the fallback.</p>
+  <p>2.0 brings only the new base and everything 1.x has by then. New features start with 2.1.</p>
+
+  <h2 id="v2x">Simple OS 2.1 to 2.3<span class="pill">Planned</span></h2>
+  <p class="when">Feature releases after 2.0, one theme each, every two to three months · the order may change with what you report</p>
+  <h3>2.1 – Keep your data safe</h3>
+  <ul>
+    <li><strong>Backups of your personal files</strong>, not only the system (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/89">#89</a>)</li>
+    <li>A <strong>recovery assistant</strong> in the boot menu that brings back a restore point when the desktop no longer starts (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/108">#108</a>)</li>
+    <li><strong>Choose when updates are installed</strong>: when you shut down or at a set time (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/109">#109</a>), and optional automatic security updates (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/54">#54</a>)</li>
+    <li>The clipboard history (Super+V) also keeps <strong>pictures</strong>, and you can pin entries (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/110">#110</a>)</li>
+    <li>The split view of the file manager becomes easy to find</li>
+  </ul>
+  <h3>2.2 – Usable for everyone</h3>
+  <ul>
+    <li><strong>Accessibility</strong>: screen reader, large cursor, high-contrast theme (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/56">#56</a>)</li>
+    <li><strong>Fingerprint reader</strong> support with a setup page (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/55">#55</a>)</li>
+    <li>A <strong>Wayland</strong> session to try out, next to the normal one (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/87">#87</a>)</li>
+  </ul>
+  <h3>2.3 – Tools</h3>
+  <ul>
+    <li>Wayland becomes the default; the old session stays as a fallback for a while (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/87">#87</a>)</li>
+    <li>A <strong>screenshot editor</strong>: arrows, text, cropping and blurring private details (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/111">#111</a>)</li>
+    <li>Optional: <strong>RGB lighting and game controllers</strong> (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/112">#112</a>)</li>
+  </ul>
+  <p>Hardware support is not a release of its own: it grows with every update. <a href="hardware.html#report">Report your computer</a> to help.</p>
 
   <h2 id="ideas">Ideas<span class="pill">Not scheduled</span></h2>
   <ul>
-    <li>Optional automatic security updates</li>
-    <li>Fingerprint reader support with a setup page</li>
-    <li>Accessibility: screen reader, large cursor, high-contrast theme</li>
     <li>Help screenshots for printers and scanners</li>
     <li>Sending a problem report to GitHub with one click, privacy first</li>
     <li>Automatic test builds on every change</li>

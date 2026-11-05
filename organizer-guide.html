@@ -36,7 +36,7 @@
 
 <div class="page-head"><div class="wrap">
   <h1>Simple Organizer user guide</h1>
-  <p class="meta">For version 3.5.3 · <a href="organizer.html">Back to Simple Organizer</a></p>
+  <p class="meta">For version 3.6.0 · <a href="organizer.html">Back to Simple Organizer</a></p>
 </div></div>
 
 <div class="wrap docs">
@@ -46,6 +46,7 @@
     <ul>
       <li><a href="#first-run">Your first run</a></li>
       <li><a href="#window">The window</a></li>
+      <li><a href="#background">Running in the background</a></li>
       <li><a href="#types">File types</a></li>
       <li><a href="#never">Files that are never moved</a></li>
       <li><a href="#rules">Rules</a></li>
@@ -71,15 +72,26 @@
   <div class="scroll"><table>
     <tbody>
       <tr><th>Top bar</th><td>Folder path, <strong>Browse…</strong>, switch between light and dark theme</td></tr>
-      <tr><th>Sidebar: Scan</th><td>Include sub-folders, include hidden files, use sub-categories, scan limits</td></tr>
+      <tr><th>Sidebar: Scan</th><td>Include sub-folders, include hidden files, use sub-categories, remove emptied folders, scan limits</td></tr>
       <tr><th>Sidebar: Staging</th><td>Staging mode, <strong>Commit</strong>, <strong>Revert</strong></td></tr>
-      <tr><th>Sidebar: Auto-organize</th><td>Sort the folder on a schedule while the program is open</td></tr>
+      <tr><th>Sidebar: Auto-organize</th><td>Sort the folder on a schedule</td></tr>
+      <tr><th>Sidebar: Background</th><td><strong>Keep running when closed</strong>, <strong>Start at login</strong></td></tr>
       <tr><th>Buttons</th><td><strong>Scan</strong>, <strong>Organize</strong>, <strong>Undo last</strong>, <strong>History…</strong></td></tr>
       <tr><th>Tabs</th><td><strong>Preview</strong>, <strong>Duplicates</strong>, <strong>Log</strong> (keeps the newest 5,000 lines), <strong>Rules</strong></td></tr>
-      <tr><th>Status bar</th><td>READY or WORKING, progress, shortcuts</td></tr>
+      <tr><th>Status bar</th><td>READY or WORKING, progress, <strong>Cancel</strong> while a scan or sort is running, shortcuts</td></tr>
     </tbody>
   </table></div>
-  <p>Only one task runs at a time; the other buttons are disabled while a scan or move is running. If you close the window during a task, the program waits until it's finished. Keyboard shortcuts also work with Caps Lock on, but not while a task is running or a dialog is open.</p>
+  <p>Only one task runs at a time; the other buttons are disabled while a scan or move is running. <strong>Cancel</strong> stops a scan or sort after the current file; files already moved stay in the history and can be undone. If you close the window during a task, it is cancelled the same way – unless the program keeps running in the background, then the task simply goes on. Keyboard shortcuts also work with Caps Lock on, but not while a task is running or a dialog is open.</p>
+
+  <h2 id="background">Running in the background</h2>
+  <p>Normally, closing the window quits the program, and Auto-organize stops with it. Tick <strong>Keep running when closed</strong> in the <strong>Background</strong> card to change that: the window goes to the system tray (next to the clock) and Auto-organize keeps sorting.</p>
+  <ul>
+    <li>Click the tray icon to open the window again, or right-click it for <strong>Organize now</strong>, turning <strong>Auto-organize</strong> on or off, and <strong>Quit</strong>.</li>
+    <li><kbd>Ctrl</kbd> + <kbd>Q</kbd> always quits the program completely.</li>
+    <li>Starting Simple Organizer again while it runs in the tray brings its window back.</li>
+  </ul>
+  <p><strong>Start at login</strong> starts the program by itself when you log in, straight into the tray. On Windows it is added to your startup apps (you can also see it in Task Manager → Startup apps); no administrator rights are needed. On Linux it creates <code>~/.config/autostart/simple-organizer.desktop</code>, which GNOME, KDE, Xfce, Cinnamon and Simple OS all use.</p>
+  <div class="note"><p>On Linux the tray needs <code>python3-pystray</code>; the Debian package installs it with its recommended packages. On GNOME the tray also needs the <em>AppIndicator</em> extension (Ubuntu has it already). Without a tray, closing the window minimises it to the taskbar instead.</p></div>
 
   <h2 id="types">File types</h2>
   <p>Without rules, files are sorted by their extension. Sub-folders are off by default. If you turn on <strong>sub-categories</strong>, one more folder level is added, for example <code>Images/Photos</code>.</p>
@@ -165,7 +177,7 @@
     <tbody>
       <tr><td>“… is an unusual folder” / “Scan this folder anyway?”</td><td>You're about to scan a whole drive, your home folder, a system folder or a Git project. Only confirm if you really mean it. Your answer is remembered.</td></tr>
       <tr><td>“Auto-organize paused”</td><td>The folder wasn't found (for example an unplugged drive), or it's an unusual folder you haven't confirmed.</td></tr>
-      <tr><td>“Simple Organizer is already running.”</td><td>Only one copy can run. Switch to the window that's already open.</td></tr>
+      <tr><td>“Simple Organizer is already running.”</td><td>Only one copy can run. Switch to the window that's already open. If it runs in the tray, its window opens by itself.</td></tr>
       <tr><td>“rules.json could not be read” / “Rules not available”</td><td>Another program (sync tool, antivirus) is blocking the file. Try again in a moment.</td></tr>
       <tr><td>“… online-only … not staged”</td><td>OneDrive files that are only online aren't staged, because that would download them. Organize without staging mode.</td></tr>
       <tr><td>“Something went wrong”</td><td>An unexpected error. Details are in <code>error.log</code>. Please <a href="help.html#report">report it</a> and attach the file.</td></tr>

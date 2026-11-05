@@ -39,13 +39,13 @@
     <img src="organizer-icon.png" width="48" height="48" alt="">
     <div>
       <h1>Simple Organizer</h1>
-      <p class="meta">Version 3.5.3 · released 2 November 2026 · Windows 10/11 and Linux · MIT License</p>
+      <p class="meta">Version 3.6.0 · released 5 November 2026 · Windows 10/11 and Linux · MIT License</p>
     </div>
   </div>
   <div class="actions">
-    <a class="btn org" href="download.html#organizer">Download for Windows <span class="size">(12.2 MB)</span></a>
+    <a class="btn org" href="download.html#organizer">Download for Windows <span class="size">(14.0 MB)</span></a>
     <a class="btn plain" href="organizer-guide.html">User guide</a>
-    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.5.3">Release notes</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.6.0">Release notes</a>
     <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-Organizer">Source code</a>
   </div>
 </div></div>
@@ -113,9 +113,11 @@
       <tr><th>Undo</th><td>Undo the last run, or any of the last 20 manual and 20 automatic runs, in any order. The history shows which folder each run belongs to.</td></tr>
       <tr><th>Rules</th><td>Your own sorting rules by file extension, name pattern, size or age, also combined. For example: everything with “invoice” in the name goes to <code>Invoices</code>, or PDFs older than a year go to <code>Archive</code>. <a href="organizer-guide.html#rules">How rules work</a></td></tr>
       <tr><th>Staging mode</th><td>Collect moves first, then commit or revert them together.</td></tr>
-      <tr><th>Auto-organize</th><td>Sorts the folder on a schedule while the program is open.</td></tr>
-      <tr><th>Duplicate finder</th><td>Finds files that are exactly the same. Copies go to the Recycle Bin or Trash only if you confirm.</td></tr>
-      <tr><th>Sub-folder scans</th><td>Can scan inside sub-folders, with limits for depth, number of folders and time.</td></tr>
+      <tr><th>Auto-organize</th><td>Sorts the folder on a schedule.</td></tr>
+      <tr><th>Background</th><td>Close the window and it keeps running in the system tray, so Auto-organize goes on. It can also start by itself when you log in, on Windows and Linux. Both are off until you switch them on.</td></tr>
+      <tr><th>Duplicate finder</th><td>Finds files that are exactly the same, also a new download that is a copy of a file you already sorted. Copies go to the Recycle Bin or Trash only if you confirm.</td></tr>
+      <tr><th>Sub-folder scans</th><td>Can scan inside sub-folders, with limits for depth, number of folders and time. Folders left empty afterwards are removed, and Undo brings them back.</td></tr>
+      <tr><th>Cancel</th><td>Stops a running scan or sort after the current file. Anything already moved can be undone.</td></tr>
       <tr><th>Look</th><td>Light and dark theme. Your settings are saved.</td></tr>
     </tbody>
   </table></div>
@@ -128,6 +130,7 @@
     <li>For whole drives, your home folder, system folders and Git projects, it asks before doing anything.</li>
     <li>The undo history is written while files are being moved. If the program crashes, you can still undo.</li>
     <li>Only one copy of the program and one task can run at a time.</li>
+    <li>Cancel stops after the current file, so no file is left half-moved.</li>
   </ul>
 
   <h2 id="shortcuts">Keyboard shortcuts</h2>
@@ -140,22 +143,23 @@
       <tr><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td><td>Search the Preview</td></tr>
       <tr><td><kbd>Ctrl</kbd> + <kbd>1</kbd> … <kbd>4</kbd></td><td>Preview, Duplicates, Log, Rules</td></tr>
       <tr><td><kbd>Space</kbd> or <kbd>Delete</kbd></td><td>Don't move the selected files (Preview)</td></tr>
-      <tr><td><kbd>Ctrl</kbd> + <kbd>Q</kbd></td><td>Quit (waits for a running task to finish)</td></tr>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>Q</kbd></td><td>Quit, also when it runs in the tray (a running task stops after the current file)</td></tr>
     </tbody>
   </table></div>
 
   <h2 id="install">Installation</h2>
   <h3>Windows 10 and 11</h3>
   <ol>
-    <li><a href="download.html#organizer">Download</a> <code>simple_organizer_windows_v3.5.3.zip</code>.</li>
+    <li><a href="download.html#organizer">Download</a> <code>simple_organizer_windows_v3.6.0.zip</code>.</li>
     <li>Extract the ZIP file.</li>
     <li>Start <code>simple_organizer.exe</code>.</li>
   </ol>
   <div class="note"><p>The program isn't code-signed yet, so Windows SmartScreen may show a warning. Right-click the file, open <strong>Properties</strong> and tick <strong>Unblock</strong>.</p></div>
 
   <h3>Linux</h3>
-  <p><strong>Debian 12+, Ubuntu 22.04+:</strong> <a href="https://github.com/FreakySneaky787/Simple-Organizer/releases/download/v3.5.3/simple-organizer_3.5.3_all.deb">download the package</a> and install it. Simple Organizer then appears in the app menu. It works on Simple OS too.</p>
-  <pre>sudo apt install ./simple-organizer_3.5.3_all.deb</pre>
+  <p><strong>Debian 12+, Ubuntu 22.04+:</strong> <a href="https://github.com/FreakySneaky787/Simple-Organizer/releases/download/v3.6.0/simple-organizer_3.6.0_all.deb">download the package</a> and install it. Simple Organizer then appears in the app menu. It works on Simple OS too.</p>
+  <pre>sudo apt install ./simple-organizer_3.6.0_all.deb</pre>
+  <p>The tray icon needs <code>python3-pystray</code>, which the package installs with its recommended packages. On GNOME the tray also needs the <em>AppIndicator</em> extension, which Ubuntu already has. Without a tray, closing the window minimises it instead.</p>
   <p><strong>Other distributions:</strong> you need Python 3.10 or newer with Tkinter.</p>
   <pre># Fedora / Bazzite
 sudo dnf install python3-tkinter
@@ -178,6 +182,7 @@ python3 main.py</pre>
   <div class="scroll"><table>
     <thead><tr><th>Version</th><th>Date</th><th>Main changes</th></tr></thead>
     <tbody>
+      <tr><th>3.6.0</th><td class="num">5 Nov 2026</td><td>Last feature update: keep running in the system tray when the window is closed; start at login on Windows and Linux; Cancel button for scans and sorting; folders left empty are removed (and restored by Undo); new files are compared with files you already sorted to find copies.</td></tr>
       <tr><th>3.5.3</th><td class="num">2 Nov 2026</td><td>5 fixes: Don't move is kept per folder; automatic runs keep the selected tab and don't replace a scan you are looking at; a file named like a nested rule target is restored correctly; undo keeps the name of a file like <code>others</code> on Windows; the history shows the year of older runs.</td></tr>
       <tr><th>3.5.2</th><td class="num">19 Oct 2026</td><td>9 fixes: files named like category folders are moved in the right order; a folder named like a rule target keeps its files; category folders in any case on Windows; <code>backup_1.tar.gz</code> on name conflicts; brackets in filename patterns; Linux names that are not valid UTF-8 in CSV export and Trash; safer undo.</td></tr>
       <tr><th>3.5.1</th><td class="num">16 Oct 2026</td><td>6 fixes: Don't move is kept after a restart; duplicates are only trashed if the kept copy has the same content; history can't be left empty by a power cut; files and folders named like a category and the folders of rules are sorted correctly.</td></tr>
@@ -191,9 +196,8 @@ python3 main.py</pre>
   <p><a href="https://github.com/FreakySneaky787/Simple-Organizer/releases">All release notes on GitHub →</a></p>
 
   <h2 id="planned">Planned</h2>
-  <p>Things I'd like to add. There are no dates for these yet. See also the <a href="roadmap.html#organizer">roadmap</a>.</p>
+  <p>Simple Organizer is complete with 3.6.0 – new versions fix bugs only. Still possible, without dates: see also the <a href="roadmap.html#organizer">roadmap</a>.</p>
   <ul>
-    <li>Watch mode that sorts new files as soon as they appear</li>
     <li>Flatpak or AppImage package for Linux</li>
     <li>Code-signed Windows version, so SmartScreen doesn't warn anymore</li>
   </ul>

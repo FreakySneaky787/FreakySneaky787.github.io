@@ -159,10 +159,10 @@
   <p>Type <code>poweroff</code>; QEMU closes. If you started it with <code>--headless</code>, you can also press <kbd>Ctrl</kbd> + <kbd>A</kbd>, then <kbd>X</kbd>.</p>
 
   <h3>Are my files kept?</h3>
-  <p>Yes. The disk image keeps what you write to it, also after a restart. To start fresh, delete <code>yak-1.0.0-disk.img</code>; the next start unpacks a new one.</p>
+  <p>Yes. The disk image keeps what you write to it, also after a restart. To start fresh, delete <code>yak-1.1.0-disk.img</code>; the next start unpacks a new one.</p>
 
   <h3>Is there a course?</h3>
-  <p>Yes: <a href="https://freakysneaky787.github.io/yak-kernel/course/index.html">Build a kernel, chapter by chapter</a>. You write an x86-64 kernel in Rust from nothing, one small step at a time; every chapter ends with a kernel that boots in QEMU and passes its own tests. The course isn't finished yet, new chapters are still being added. You need some Rust (ownership, <code>struct</code>/<code>impl</code>, traits, modules), but no kernel or assembly knowledge.</p>
+  <p>Yes: <a href="https://freakysneaky787.github.io/yak-kernel/course/index.html">Build a kernel, chapter by chapter</a>. You write an x86-64 kernel in Rust from nothing, one small step at a time; every chapter ends with a kernel that boots in QEMU and passes its own tests. It has 20 chapters, from the first boot to the first program in ring 3; for now it ends there. You need some Rust (ownership, <code>struct</code>/<code>impl</code>, traits, modules), but no kernel or assembly knowledge.</p>
 
   <h3>YAK doesn't start with UEFI.</h3>
   <p>Check the path to the UEFI firmware: on Debian and Ubuntu it's <code>/usr/share/OVMF/OVMF_CODE_4M.fd</code> (package <code>ovmf</code>), on Fedora <code>/usr/share/edk2/ovmf/OVMF_CODE.fd</code> (package <code>edk2-ovmf</code>). UEFI also needs at least 160 MiB of RAM; the start script gives QEMU 256 MiB.</p>

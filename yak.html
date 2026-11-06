@@ -39,13 +39,13 @@
     <svg width="48" height="48" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="5" fill="#1d1d1b"/><path d="M9 13l7 7-7 7" fill="none" stroke="#e0743c" stroke-width="3.5" stroke-linecap="square"/><path d="M19 28h12" stroke="#ece8e1" stroke-width="3.5"/></svg>
     <div>
       <h1>YAK – Yet Another Kernel</h1>
-      <p class="meta">Version 1.0.0 · released 27 October 2026 · x86-64, runs in QEMU · GPL-3.0-or-later</p>
+      <p class="meta">Version 1.1.0 · released 6 November 2026 · x86-64, runs in QEMU · GPL-3.0-or-later</p>
     </div>
   </div>
   <div class="actions">
     <a class="btn yak" href="download.html#yak">Download <span class="size">(ISO + disk image)</span></a>
     <a class="btn plain" href="https://freakysneaky787.github.io/yak-kernel/">Documentation</a>
-    <a class="btn plain" href="https://github.com/FreakySneaky787/yak-kernel/releases/tag/v1.0.0">Release notes</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/yak-kernel/releases/tag/v1.1.0">Release notes</a>
     <a class="btn plain" href="https://github.com/FreakySneaky787/yak-kernel">Source code</a>
   </div>
 </div></div>
@@ -76,7 +76,7 @@
   <h2 id="what">What it is</h2>
   <p>YAK is a small x86-64 operating system written from scratch in Rust. It's made for learning how a kernel works: by reading it, running it, testing it and changing it. It runs in QEMU, with BIOS and UEFI.</p>
   <p>Everything is our own code. The only crates are <code>limine</code> (boot protocol) and <code>spin</code> (locks).</p>
-  <p>YAK is a hobby and learning project. It is not a Linux replacement, not POSIX-compatible, not a desktop system and not a driver collection for real hardware. A course is being written: <a href="https://freakysneaky787.github.io/yak-kernel/course/index.html">build a kernel, chapter by chapter</a>. It isn't finished yet.</p>
+  <p>YAK is a hobby and learning project. It is not a Linux replacement, not POSIX-compatible, not a desktop system and not a driver collection for real hardware. There is a course: <a href="https://freakysneaky787.github.io/yak-kernel/course/index.html">build a kernel, chapter by chapter</a>. Its 20 chapters go from the first boot over interrupts, memory, threads on every core, a SATA driver and FAT32 up to the first program in ring 3; each one is a complete project with its own tests. For now the course ends there.</p>
 
   <h2 id="features">What's in it</h2>
   <div class="scroll"><table>
@@ -100,7 +100,7 @@
 ./run-yak.sh                # QEMU window; the serial console is in this terminal
 ./run-yak.sh --headless     # no window (Ctrl+A X quits QEMU)
 ./run-yak.sh --uefi /usr/share/OVMF/OVMF_CODE_4M.fd   # through UEFI</pre>
-  <p>On Fedora the UEFI firmware is at <code>/usr/share/edk2/ovmf/OVMF_CODE.fd</code>. The disk image is unpacked on the first start and keeps what you write to it. Delete <code>yak-1.0.0-disk.img</code> to start fresh.</p>
+  <p>On Fedora the UEFI firmware is at <code>/usr/share/edk2/ovmf/OVMF_CODE.fd</code>. The disk image is unpacked on the first start and keeps what you write to it. Delete <code>yak-1.1.0-disk.img</code> to start fresh.</p>
   <p>Things to try in the shell: <code>help</code>, <code>ls /bin</code>, <code>cat /README.txt | wc</code>, <code>ps</code>, <code>cpu</code>, <code>ping 10.0.2.2</code>, <code>edit notes.txt</code>.</p>
   <div class="note"><p>The keyboard layout is German (QWERTZ) by default.</p></div>
 

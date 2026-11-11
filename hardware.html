@@ -54,7 +54,7 @@
 </aside>
 
 <main id="main" class="content">
-  <p>Your computer isn't listed? It may still work. Start it from the USB stick first: the live session changes nothing on the computer. Then <a href="#report">tell us how it went</a>, so the next person knows. Last updated: 8 November 2026 (Simple OS 1.1.1).</p>
+  <p>Your computer isn't listed? It may still work. Start it from the USB stick first: the live session changes nothing on the computer. Then <a href="#report">tell us how it went</a>, so the next person knows. Last updated: 11 November 2026 (Simple OS 1.1.1).</p>
 
   <h2 id="tested">Tested computers</h2>
   <p><strong>Partly</strong> means it works, with a limitation described below the table. A dash means it hasn't been tested yet. <strong>Monitor</strong> is an external monitor or projector.</p>
@@ -62,11 +62,13 @@
     <thead><tr><th>Computer · firmware · version</th><th>Install</th><th style="white-space:nowrap">Wi-Fi</th><th>Sound</th><th>Graphics</th><th>Brightness</th><th>Suspend</th><th>Monitor</th></tr></thead>
     <tbody>
       <tr><th style="white-space:normal">Lenovo ThinkPad E16 Gen 3<br><span class="sub small">UEFI, Secure Boot off · 1.0.7, 1.1, 1.1.1</span></th><td class="yes">Yes</td><td class="part">Partly</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+      <tr><th style="white-space:normal">Self-built desktop<br><span class="sub small">UEFI, Secure Boot off, next to Windows · 1.1.1</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="na">–</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
       <tr><th style="white-space:normal">Acer Predator<br><span class="sub small">UEFI, Secure Boot off, next to Windows · 1.0.7</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="na">–</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
       <tr><th style="white-space:normal">Dell OptiPlex 9020<br><span class="sub small">Legacy BIOS, dual boot · 1.0.3</span></th><td class="no">No</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
     </tbody>
   </table></div>
   <p><strong>Lenovo ThinkPad E16 Gen 3</strong> (21TF: Intel Core 5 210H, Intel graphics, Intel Wi-Fi) has been in daily use since Simple OS 1.0. Wi-Fi: with one router, the 5 GHz connection on a wide 160 MHz channel was slow. Setting the network to 2.4 GHz in Control Center → Wi-Fi fixed it. Bluetooth headphones, keyboards and phones pair. A monitor plugged in later turns on by itself. Suspend and waking up were checked with 1.0.7. Simple OS 1.1 runs on it too, and 1.1.1 was installed fresh on it before its release: menus stay open with a firm touchpad click, and the bigger window buttons are easy to hit. The power button has to be held for about a second; the firmware ignores a quick tap.</p>
+  <p><strong>Self-built desktop</strong> (AMD Ryzen 5 5600X, NVIDIA GeForce RTX 3050 with 8 GB, 16 GB DDR4, Wi-Fi) was installed next to Windows with 1.1.1 and tested by a friend of the project: everything except games and heavy load works – including the <strong>NVIDIA driver</strong> from Control Center → System &amp; Updates → Hardware &amp; Drivers (Secure Boot off). The first report of the NVIDIA driver on a real computer.</p>
   <p><strong>Acer Predator</strong> (gaming desktop: Intel Core i7 13th gen, NVIDIA GeForce RTX 4070 Super, 32 GB RAM) was installed next to Windows with 1.0.7. Installing, Wi-Fi, sound, suspend and an external monitor work. Graphics with 3D (games) and the NVIDIA driver weren't tried yet (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/105">#105</a>).</p>
 
   <p><strong>Dell OptiPlex 9020</strong> (desktop): with 1.0.3, the installer could leave the disk unable to start (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/62">#62</a>, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/64">#64</a>). This was fixed in 1.0.4 and tested in a virtual machine set up like this computer (legacy BIOS, MBR, “Install alongside” in an extended partition). A test on the real computer is still to come.</p>
@@ -76,7 +78,7 @@
 
   <h2 id="wanted">Not tested yet – help wanted</h2>
   <ul>
-    <li>The <strong>NVIDIA driver</strong> and games on a desktop with an NVIDIA graphics card</li>
+    <li><strong>Games</strong> (Steam, Proton) and heavy load with the NVIDIA driver – the driver itself works (RTX 3050, see above)</li>
     <li>A laptop with <strong>AMD</strong> graphics</li>
     <li><strong>Secure Boot on</strong> with an installed system on a real computer</li>
     <li>Older <strong>Mac</strong> laptops (Intel). They usually need the Broadcom Wi-Fi driver.</li>

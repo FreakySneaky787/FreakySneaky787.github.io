@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://freakysneaky787.github.io/sitemap.xml

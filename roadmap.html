@@ -136,6 +136,17 @@
 
   <h2 id="organizer">Simple Organizer</h2>
   <p>The current version is <a href="https://github.com/FreakySneaky787/Simple-Organizer/releases/tag/v3.6.0">3.6.0</a> (5 November 2026). It was the last feature update: Simple Organizer is complete, and new versions fix bugs only.</p>
+  <h3>3.6.1 – bug-fix release <span class="pill">Planned</span></h3>
+  <p>Fixes from a code review of 3.6.0, mostly for the new background mode:</p>
+  <ul>
+    <li><strong>Background mode on Linux:</strong> make the tray menu work with the AppIndicator/GTK tray <a href="https://github.com/FreakySneaky787/Simple-Organizer/issues/108">#108</a></li>
+    <li><strong>Background mode:</strong> show messages as system notifications while the window is hidden, and never let a hidden error message stop Auto-organize <a href="https://github.com/FreakySneaky787/Simple-Organizer/issues/109">#109</a></li>
+    <li>Closing the window after Quit was chosen with a dialog open quits instead of going to the tray <a href="https://github.com/FreakySneaky787/Simple-Organizer/issues/110">#110</a></li>
+    <li>Cancel: correct message when the run had already finished, and errors of a cancelled run are reported <a href="https://github.com/FreakySneaky787/Simple-Organizer/issues/111">#111</a></li>
+    <li>Faster scans: files that are already sorted are not compared again and again <a href="https://github.com/FreakySneaky787/Simple-Organizer/issues/112">#112</a></li>
+    <li>Start at login keeps pointing at the right program <a href="https://github.com/FreakySneaky787/Simple-Organizer/issues/114">#114</a>, and the build steps include the tray packages <a href="https://github.com/FreakySneaky787/Simple-Organizer/issues/113">#113</a></li>
+  </ul>
+  <h3>Later</h3>
   <p>No dates yet. Still possible, as packaging and maintenance work:</p>
   <ul>
     <li>Flatpak or AppImage package for Linux</li>

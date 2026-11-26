@@ -54,7 +54,7 @@
 </aside>
 
 <main id="main" class="content">
-  <p>Your computer isn't listed? It may still work. Start it from the USB stick first: the live session changes nothing on the computer. Then <a href="#report">tell us how it went</a>, so the next person knows. Last updated: 18 November 2026 (Simple OS 1.1.2).</p>
+  <p>Your computer isn't listed? It may still work. Start it from the USB stick first: the live session changes nothing on the computer. Then <a href="#report">tell us how it went</a>, so the next person knows. Last updated: 26 November 2026 (Simple OS 1.1.2).</p>
 
   <h2 id="tested">Tested computers</h2>
   <p><strong>Partly</strong> means it works, with a limitation described below the table. A dash means it hasn't been tested yet. <strong>Monitor</strong> is an external monitor or projector.</p>
@@ -65,6 +65,7 @@
       <tr><th style="white-space:normal">Self-built desktop<br><span class="sub small">UEFI, Secure Boot off, next to Windows · 1.1.1</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="na">–</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
       <tr><th style="white-space:normal">Acer Predator<br><span class="sub small">UEFI, Secure Boot off, next to Windows · 1.0.7, 1.1.2</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="na">–</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
       <tr><th style="white-space:normal">Samsung Galaxy Book 4<br><span class="sub small">UEFI, Secure Boot on, whole disk · 1.1.2</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+      <tr><th style="white-space:normal">ASUS K42JA<br><span class="sub small">Legacy BIOS · 1.1.2</span></th><td class="yes">Yes</td><td class="na">–</td><td class="na">–</td><td class="yes">Yes</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
       <tr><th style="white-space:normal">Dell OptiPlex 9020<br><span class="sub small">Legacy BIOS, dual boot · 1.0.3</span></th><td class="no">No</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
     </tbody>
   </table></div>
@@ -74,6 +75,8 @@
 
   <p><strong>Samsung Galaxy Book 4</strong> (Intel Core 7 150U, 16 GB RAM) was installed to the whole disk (512 GB M.2 SSD, automatic partitioning) with 1.1.2, <strong>Secure Boot on</strong>, and used as a daily computer from now on. Installing, Wi-Fi, sound, graphics, brightness, suspend and waking up work. Chromium, LibreOffice and Steam installed from the Software Store without problems, and updates from Control Center ran cleanly. An external monitor on HDMI (1920×1080) works, and so do all ports: two USB-A, USB-C, HDMI, network cable, headphone jack and the microSD slot. A Bluetooth mouse, the number pad and the Fn keys for brightness, keyboard backlight and volume work. The Fn keys for CPU level, touchpad off and settings, and the Copilot key, do nothing; they often have no standard mapping on Linux. (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/146">#146</a>).</p>
 
+  <p><strong>ASUS K42JA</strong> (laptop from 2010: Intel Core i5-460M, ATI Mobility Radeon HD 5730) was reported by a user on YouTube. It runs well on the old hardware: low memory use, the desktop looks good, and browsers start faster than on other Linux systems they tried. No problems so far, and Simple OS stays on the laptop. Wi-Fi, sound, brightness and suspend weren't reported one by one yet.</p>
+
   <p><strong>Dell OptiPlex 9020</strong> (desktop): with 1.0.3, the installer could leave the disk unable to start (<a href="https://github.com/FreakySneaky787/Simple-OS/issues/62">#62</a>, <a href="https://github.com/FreakySneaky787/Simple-OS/issues/64">#64</a>). This was fixed in 1.0.4 and tested in a virtual machine set up like this computer (legacy BIOS, MBR, “Install alongside” in an extended partition). A test on the real computer is still to come.</p>
 
   <h2 id="vm">Virtual machines</h2>
@@ -82,7 +85,7 @@
   <h2 id="wanted">Not tested yet – help wanted</h2>
   <ul>
     <li><strong>Games</strong> (Steam, Proton) and heavy load with the NVIDIA driver – the driver itself works (RTX 3050, see above)</li>
-    <li>A laptop with <strong>AMD</strong> graphics</li>
+    <li>A newer laptop with <strong>AMD</strong> graphics (the 2010 ASUS K42JA with ATI Radeon works, see above)</li>
     <li>Older <strong>Mac</strong> laptops (Intel). They usually need the Broadcom Wi-Fi driver.</li>
   </ul>
 

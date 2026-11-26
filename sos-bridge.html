@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOS Bridge apps – Simple-Project</title>
+<meta name="description" content="Windows programs tested with SOS Bridge on Simple OS: which work, which don&#39;t, and how to report a program.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fffdf9">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freakysneaky787.github.io/sos-bridge.html">
+<link rel="canonical" href="https://freakysneaky787.github.io/sos-bridge.html">
+<meta property="og:title" content="SOS Bridge apps – Simple-Project">
+<meta property="og:description" content="Windows programs tested with SOS Bridge on Simple OS: which work, which don&#39;t, and how to report a program.">
+<meta property="og:image" content="https://raw.githubusercontent.com/FreakySneaky787/Simple-OS/main/docs/sos-banner.png">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><span>Simple-Project</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="simple-os.html">Simple OS</a>
+    <a href="organizer.html">Organizer</a>
+    <a href="yak.html">YAK</a>
+    <a href="download.html">Download</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="help.html">Help</a>
+    <a href="contribute.html">Get involved</a>
+    <a href="about.html">About</a>
+    <a href="https://github.com/FreakySneaky787">GitHub</a>
+  </nav>
+</div></header>
+
+<div class="page-head"><div class="wrap">
+  <h1>SOS Bridge apps</h1>
+  <p class="lead">SOS Bridge runs Windows programs on Simple OS 1.2: double-click a .exe or .msi file. These are the programs it is known to work with – tested by us or reported by people who use it – and the ones that don't.</p>
+</div></div>
+
+<div class="wrap docs">
+<aside>
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#tested">Tested programs</a></li>
+      <li><a href="#how">How we test</a></li>
+      <li><a href="#never">What never works</a></li>
+      <li><a href="#good">Good to know</a></li>
+      <li><a href="#report">Report a program</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main id="main" class="content">
+  <p>SOS Bridge is the free app <a href="https://usebottles.com">Bottles</a> with Wine, set up so you don't have to know either: double-click a downloaded <code>.exe</code> or <code>.msi</code> file (or right-click → “Run with SOS Bridge”), and the program installs and opens. Wine doesn't run every Windows program. Your program isn't listed? It may still work – try it, then <a href="#report">tell us how it went</a>. Last updated: 26 November 2026 (Simple OS 1.2).</p>
+
+  <h2 id="tested">Tested programs</h2>
+  <p><strong>Works</strong> means it installs, starts and does its job. <strong>Starts</strong> means it installs and opens, but its main job wasn't checked yet. A dash means it hasn't been tested yet.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Program · version</th><th>Install</th><th>Starts</th><th>Checked</th><th>Uninstall</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><th style="white-space:normal">7-Zip<br><span class="sub small">26.06 · 64-bit .exe and .msi, 32-bit .exe · archiver</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">create and extract an archive</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">Notepad++<br><span class="sub small">8.9.9.1 · installer and portable .zip · text editor</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">type and save, open from Downloads</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">WinSCP<br><span class="sub small">6.7.1 · file transfer (SFTP)</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">download and upload over SFTP</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">PuTTY<br><span class="sub small">0.85 · .msi · SSH client</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">log in over SSH, run a command</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">SumatraPDF<br><span class="sub small">3.6.1 · PDF reader</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">open a PDF</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">KeePass<br><span class="sub small">2.62 · .NET · password manager</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">create and save a database</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">Greenshot<br><span class="sub small">1.3 · .NET · screenshots</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">take a screenshot and save it</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">GIMP ¹<br><span class="sub small">3.0.8 · image editor</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">convert PNG to JPG</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">Inkscape ¹<br><span class="sub small">1.4.4 · vector drawing</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">export SVG to PNG</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">LibreOffice ¹<br><span class="sub small">26.8.3 · .msi · office suite</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">Writer: text to PDF</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">Python<br><span class="sub small">3.14.10 · programming</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">IDLE: a script writes a file</td><td class="part">Partly ²</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">DB Browser for SQLite<br><span class="sub small">3.13.1 · with Visual C++ 2015–2022 · database</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">open a database</td><td class="yes">Yes</td><td class="yes"><strong>Works</strong></td></tr>
+      <tr><th style="white-space:normal">VLC ¹<br><span class="sub small">3.0.24 · media player</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">–</td><td class="yes">Yes</td><td class="part"><strong>Starts</strong></td></tr>
+      <tr><th style="white-space:normal">Audacity ¹<br><span class="sub small">4.0.2 · .msi · audio editor</span></th><td class="yes">Yes</td><td class="yes">Yes</td><td style="white-space:normal">–</td><td class="yes">Yes</td><td class="part"><strong>Starts</strong></td></tr>
+      <tr><th style="white-space:normal">Visual Studio Code ³<br><span class="sub small">1.147 · code editor</span></th><td class="yes">Yes</td><td class="no">No</td><td style="white-space:normal">–</td><td class="yes">Yes</td><td class="no"><strong>No</strong></td></tr>
+      <tr><th style="white-space:normal">Obsidian ³<br><span class="sub small">1.15.1 · notes</span></th><td class="no">No</td><td class="na">–</td><td style="white-space:normal">–</td><td class="na">–</td><td class="no"><strong>No</strong></td></tr>
+      <tr><th style="white-space:normal">FileZilla<br><span class="sub small">not tested yet · file transfer (FTP)</span></th><td class="na">–</td><td class="na">–</td><td style="white-space:normal">–</td><td class="na">–</td><td class="na">–</td></tr>
+    </tbody>
+  </table></div>
+  <p>All programs that work also started again after restarting the computer, and their entries appear in the Simple OS menu like any other app. Their Open and Save windows show your own Documents, Downloads, Pictures, Music, Videos and Desktop.</p>
+  <p><strong>¹ There's a Simple OS version.</strong> GIMP, Inkscape, LibreOffice, VLC and Audacity also exist as normal Simple OS apps in the Software Center – they start faster and fit in better. SOS Bridge points you to them when you open their Windows installer; you can still continue with the Windows version.</p>
+  <p><strong>² Python:</strong> uninstalling failed once in the test (error 0x80070643), most likely because the test had removed parts of it by hand before.</p>
+  <p><strong>³ Electron apps</strong> (programs built on Chromium, such as Visual Studio Code and Obsidian) crash in Wine, or their installer doesn't finish. Use the Simple OS versions instead: <strong>VSCodium</strong> (Setup Wizard → Extras → Developer Tools, or the Software Center) is Visual Studio Code without Microsoft's tracking, and Obsidian is in the Software Center.</p>
+
+  <h2 id="how">How we test</h2>
+  <p>Each program is tested in a fresh Simple OS 1.2 installation with SOS Bridge (Bottles 67.7 from Flathub, runner soda-11.0-10), set up by SOS Bridge itself on the first double-click:</p>
+  <ol>
+    <li>Open the downloaded installer with a double-click and install it, as a normal user would.</li>
+    <li>Start it from the Simple OS menu and check one real job: save a file, open a document, connect to a server …</li>
+    <li>Restart the computer and start it again.</li>
+    <li>Uninstall it with its own uninstaller – the menu entry has to disappear too.</li>
+  </ol>
+  <p>The test run is documented in issue <a href="https://github.com/FreakySneaky787/Simple-OS/issues/153">#153</a> (24 November 2026).</p>
+
+  <h2 id="never">What never works</h2>
+  <ul>
+    <li><strong>Programs made for Windows itself:</strong> Windows installation media and setup tools, drivers, antivirus and system tuners. They need a real Windows.</li>
+    <li><strong>Microsoft 365</strong> (Word, Excel, Outlook as apps) and <strong>current Adobe apps</strong> (Photoshop, Premiere, Acrobat Pro). Microsoft 365 works in the browser, and LibreOffice or ONLYOFFICE open Word and Excel files.</li>
+    <li><strong>Games with kernel anti-cheat</strong> (for example Valorant, Fortnite and many competitive online games). Many other games run through Steam: in Steam → Settings → Compatibility, turn on “Steam Play for all other titles”.</li>
+  </ul>
+
+  <h2 id="good">Good to know</h2>
+  <ul>
+    <li>The first double-click sets SOS Bridge up once, which takes about a minute. After that, programs open straight away.</li>
+    <li>Windows setup windows (.msi) sometimes show placeholder text (“Lorem ipsum”) on the “Custom Setup” page. That comes from Wine and is harmless.</li>
+    <li>Links in Windows programs open in your normal Simple OS browser.</li>
+    <li>Menu → Help → Windows Programs on Simple OS explains the same in your language, with alternatives.</li>
+  </ul>
+
+  <h2 id="report">Report a program</h2>
+  <p>Tried a Windows program with SOS Bridge? Open an <a href="https://github.com/FreakySneaky787/Simple-OS/issues/new?title=SOS%20Bridge%3A%20">issue on GitHub</a> with the program's name and version, where you downloaded it, and what worked: installing, starting, its main job, starting again after a restart, uninstalling. If something didn't work, the exact error message helps a lot. The program then gets a row here.</p>
+</main>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div><span class="mark" aria-hidden="true"><span class="s">S</span><span class="d">-</span><span class="p">P</span></span><br><strong>Simple-Project</strong><br>Open-source software from Switzerland.<br>&copy; 2026 FreakySneaky</div>
+    <div><strong>Software</strong><ul><li><a href="simple-os.html">Simple OS</a></li><li><a href="organizer.html">Simple Organizer</a></li><li><a href="organizer-guide.html">Organizer guide</a></li><li><a href="yak.html">YAK</a></li><li><a href="download.html">Download</a></li></ul></div>
+    <div><strong>Project</strong><ul><li><a href="roadmap.html">Roadmap</a></li><li><a href="contribute.html">Get involved</a></li><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li><li><a href="https://github.com/sponsors/FreakySneaky787">Sponsor</a></li></ul></div>
+    <div><strong>Support</strong><ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="hardware.html">Hardware</a></li><li><a href="sos-bridge.html">SOS Bridge apps</a></li><li><a href="help.html#report">Report a problem</a></li><li><a href="https://github.com/FreakySneaky787">GitHub</a></li></ul></div>
+  </div>
+  <p class="legal">Simple OS is based on Debian but is not an official Debian product and is not affiliated with the Debian project. Simple OS and YAK are licensed under the GPL-3.0, Simple Organizer under the MIT License.</p>
+</div></footer>
+
+</body>
+</html>

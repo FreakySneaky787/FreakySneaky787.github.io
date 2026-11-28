@@ -39,12 +39,12 @@
     <svg width="48" height="48" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="#fff" stroke-width="9"/><circle cx="20" cy="20" r="14" fill="none" stroke="#c8242c" stroke-width="9" stroke-dasharray="11 11"/><circle cx="20" cy="20" r="18.5" fill="none" stroke="#000" stroke-opacity=".2"/><circle cx="20" cy="20" r="9.5" fill="none" stroke="#000" stroke-opacity=".2"/></svg>
     <div>
       <h1>Simple OS</h1>
-      <p class="meta">Version 1.1.2 · released 15 November 2026 · GPL-3.0</p>
+      <p class="meta">Version 1.2 · released 28 November 2026 · GPL-3.0</p>
     </div>
   </div>
   <div class="actions">
     <a class="btn" href="download.html#simple-os">Download <span class="size">(1.5 GB)</span></a>
-    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.1.2">Release notes</a>
+    <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-OS/releases/tag/v1.2">Release notes</a>
     <a class="btn plain" href="https://github.com/FreakySneaky787/Simple-OS">Source code</a>
     <a class="btn plain" href="hardware.html">Tested computers</a>
   </div>
@@ -178,7 +178,9 @@
   <div class="scroll"><table>
     <thead><tr><th>Problem</th><th>What you can do</th></tr></thead>
     <tbody>
-      <tr><td>The Simple OS tools (Setup Wizard, Control Center, messages) are only in English. Firefox, LibreOffice and the dictionaries do follow your language.</td><td>You can change the keyboard layout at any time in Control Center → Keyboard. Translations are planned for 1.2.</td></tr>
+      <tr><td>The Simple OS tools (Setup Wizard, Control Center, messages) are in English and German. In other languages they stay English, while Firefox, LibreOffice and the dictionaries follow your language.</td><td>You can change the language and the keyboard layout at any time in Control Center → Language &amp; Region and → Keyboard.</td></tr>
+      <tr><td>An English installation gets German number and date formats: the installer preselects the time zone Europe/Berlin, without a location lookup.</td><td>Change the formats in Control Center → Language &amp; Region.</td></tr>
+      <tr><td>Not every Windows program runs with SOS Bridge: Microsoft 365, current Adobe apps and games with anti-cheat don't.</td><td>See the <a href="sos-bridge.html">list of tested programs</a> and Menu → Help → Windows Programs for alternatives.</td></tr>
       <tr><td>The firewall blocks hosting LAN games and Steam Remote Play as host.</td><td>Turn the firewall off in Control Center → Password &amp; Security while you play, and back on afterwards.</td></tr>
       <tr><td>NVIDIA drivers only work with Secure Boot turned off. Simple OS itself starts with Secure Boot on.</td><td>Turn off Secure Boot in the firmware settings (BIOS/UEFI), then install the driver in Control Center → System &amp; Updates → Hardware &amp; Drivers.</td></tr>
       <tr><td>Some programs are older versions than on other distributions, because Simple OS is based on Debian 12.</td><td>Apps from the Software Store (Flathub) are up to date. Simple OS 2.0 will move to Debian 13.</td></tr>
@@ -189,6 +191,7 @@
   <div class="scroll"><table>
     <thead><tr><th>Version</th><th>Date</th><th>Main changes</th></tr></thead>
     <tbody>
+      <tr><th>1.2</th><td class="num">28 Nov 2026</td><td>New ISO, the last feature release of 1.x: the Simple OS tools in German; a Users page in Control Center (add people, passwords, pictures, automatic sign-in, “Switch user”); Windows programs with SOS Bridge; extras in the Setup Wizard (SOS Bridge, gaming support, developer tools); AppArmor profiles; your accent color and light mode everywhere; the search picks the best match; Chromium in your language and without a keyring prompt.</td></tr>
       <tr><th>1.1.2</th><td class="num">15 Nov 2026</td><td>New ISO, better menus: the row under the mouse lights up in your accent color, the best match comes first, Control Center pages in the search, the sound menu stays open; desktop PCs lock again after a video; Do Not Disturb stays on after a restart; plain words in the update window; nothing left running after signing out.</td></tr>
       <tr><th>1.1.1</th><td class="num">8 Nov 2026</td><td>New ISO, bug fixes: menus stay open after a slow click; the speaker icon opens the sound menu instead of muting; bigger window buttons that follow the display scale; updates shown in plain words; the restore point before an update no longer looks frozen; each software store has its own icon.</td></tr>
       <tr><th>1.1</th><td class="num">4 Nov 2026</td><td>New ISO, the first feature update; display scaling for high-resolution screens (Control Center → Display → Scale) and a Large taskbar with a bigger clock; a Language &amp; Region page for the language of your apps and the formats; a Camera app; a much smaller initramfs and a faster live system, so the computer starts quicker; encrypted installations no longer wait 30 seconds at startup; “Safely remove” only for USB drives.</td></tr>
@@ -205,7 +208,7 @@
   <p><a href="https://github.com/FreakySneaky787/Simple-OS/releases">All release notes on GitHub →</a></p>
 
   <h2 id="next">What's next</h2>
-  <p><strong>1.2</strong> brings translations and a page for user accounts; it is the last feature release of 1.x before the move to Debian 13. Bug-fix updates come in between, about every two to three weeks. Everything else is on the <a href="roadmap.html">roadmap</a>.</p>
+  <p><strong>1.2</strong> is the last feature release of 1.x. From now on 1.2.x gets bug fixes, about every two to three weeks, and the work goes into Simple OS 2.0 on Debian 13. Everything else is on the <a href="roadmap.html">roadmap</a>.</p>
 </main>
 </div>
 
